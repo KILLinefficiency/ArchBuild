@@ -1,0 +1,35 @@
+window:
+  padding:
+    x: 10
+    y: 10
+
+  decorations: none
+
+font:
+  normal:
+    family: Hack
+    style: Regular
+  bold:
+    family: Hack
+    style: Bold
+  italic:
+    family: Hack
+    style: Italic
+  bold_italic:
+    family: Hack
+    style: Bold Italic
+
+  size: 11
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+background_opacity: 0.95
+
+draw_bold_text_with_bright_colors: true
+
+cursor:
+  style: Block
+  unfocused_hollow: true
+
