@@ -16,14 +16,17 @@ echo "127.0.0.1 localhost corvo" >> /etc/hosts
 
 passwd root
 
-useradd -m -d /home/shreyas Shreyas --badnames
+useradd -m -d /home/shreyas shreyas
 passwd Shreyas
 echo "Shreyas ALL=(ALL) ALL" >> /etc/sudoers
 
 grub-install /dev/sda --efi-directory="/boot"
 grub-mkconfig -o /boot/grub/grub.cfg
 
-sudo pacman -S xorg xorg-xinit --noconfirm
+pacman -S xorg xorg-xinit --noconfirm
+
+pacman -S nano vim ttf-hack neoetch htop bat groff
+pacman -Rns xorg-fonts-75dpi xorg-fonts-100dpi
 
 cd ~
 mkdir Documents Downloads Music Videos Pictures .aur
