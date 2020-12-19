@@ -28,11 +28,4 @@ pacman -S xorg xorg-xinit --noconfirm
 pacman -S nano vim ttf-hack neoetch htop bat groff
 pacman -Rns xorg-fonts-75dpi xorg-fonts-100dpi
 
-cd ~
-mkdir Documents Downloads Music Videos Pictures .aur
-cd .aur
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-
 exit
