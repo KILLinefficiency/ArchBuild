@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S alacritty bspwm sxhkd dmenu --noconfirm
+sudo pacman -S alacritty --noconfirm
 
 ADDRESS=$(pwd)
 
@@ -14,7 +14,7 @@ if ![ -f ~/.config ]; then
   mkdir ~/.config
 fi
 
-mkdir ~/.config/alacritty ~/.config/bspwm ~/.config/sxhkd
+mkdir ~/.config/alacritty
 
 cd $ADDRESS
 
