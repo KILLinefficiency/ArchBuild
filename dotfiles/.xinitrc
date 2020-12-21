@@ -1,1 +1,1 @@
-exec bspwm
+exec dwm
