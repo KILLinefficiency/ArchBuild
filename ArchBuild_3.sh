@@ -22,5 +22,17 @@ cp dotfiles/.bashrc ~/.bashrc
 cp dotfiles/.xinitrc ~
 cp dotfiles/alacritty/alacritty.yml ~/config/alacritty/alacritty.yml
 
+cd ~
+mkdir ~/.suckless
+cd ~/.suckless
+git clone git://git.suckless.org/dwm
+git clone git://git.suckless.org/dmenu
+cd ~/.suckless/dmenu
+make
+cd ~
+cd ~/.suckless/dwm
+make
+cp $ADDRESS/dotfiles/dwm/config.h ~/.suckless/dwm/config.h
+make
 
-sudo pacman -S gcc python3 python-pip atom --noconfirm
+sudo pacman -S gcc python3 python-pip --noconfirm

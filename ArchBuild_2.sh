@@ -3,7 +3,7 @@
 pacman -Sy git dhcpcd networkmanager grub efibootmgr base-devel --noconfirm
 
 systemctl enable dhcpcd
-systemclt enable NetworkManager
+systemctl enable NetworkManager
 
 ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 
@@ -25,7 +25,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 pacman -S xorg xorg-xinit --noconfirm
 
-pacman -S nano vim ttf-hack neoetch htop bat groff
+pacman -S nano vim ttf-hack neofetch htop bat groff
 pacman -Rns xorg-fonts-75dpi xorg-fonts-100dpi
 
 exit
