@@ -33,6 +33,7 @@ cd ~
 cd ~/.suckless/dwm
 make
 cp $ADDRESS/dotfiles/dwm/config.h ~/.suckless/dwm/config.h
+cp $ADDRESS/dotfiles/dwm/get_time ~/.suckless/dwm/get_time
 make
 
 sudo pacman -S gcc python3 python-pip --noconfirm
