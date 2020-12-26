@@ -31,8 +31,7 @@ cd ~/.suckless/dmenu
 make
 cd ~
 cd ~/.suckless/dwm
-cp $ADDRESS/dotfiles/dwm/config.def.h ~/.suckless/dwm/config.def.h
-cp $ADDRESS/dotfiles/dwm/get_time ~/.suckless/dwm/get_time
+cp $ADDRESS/dotfiles/dwm/* ~/.suckless/dwm/
 make
 
 sudo pacman -S gcc python3 python-pip --noconfirm
