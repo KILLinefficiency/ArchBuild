@@ -23,7 +23,7 @@ echo "shreyas ALL=(ALL) ALL" >> /etc/sudoers
 grub-install /dev/sda --efi-directory="/boot"
 grub-mkconfig -o /boot/grub/grub.cfg
 
-pacman -S xorg xorg-xinit --noconfirm
+pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot --noconfirm
 
 pacman -S nano vim ttf-hack neofetch htop bat groff
 pacman -Rns xorg-fonts-75dpi xorg-fonts-100dpi
