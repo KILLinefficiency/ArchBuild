@@ -31,8 +31,7 @@ cd ~/.suckless/dmenu
 make
 cd ~
 cd ~/.suckless/dwm
-make
-cp $ADDRESS/dotfiles/dwm/config.h ~/.suckless/dwm/config.h
+cp $ADDRESS/dotfiles/dwm/config.def.h ~/.suckless/dwm/config.def.h
 cp $ADDRESS/dotfiles/dwm/get_time ~/.suckless/dwm/get_time
 make
 
