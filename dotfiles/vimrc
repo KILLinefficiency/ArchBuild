@@ -1,5 +1,6 @@
 syntax on
 
+set t_Co=256
 set bg=light
 set tabstop=4
 set encoding=utf-8
