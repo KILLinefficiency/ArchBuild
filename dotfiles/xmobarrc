@@ -1,8 +1,8 @@
 Config { 
 
    -- appearance
-     font =         "xft:Font Awesome 5 Free Solid:style=solid:size=10, Hack:size=10:Bold:antialias=true"
-   , bgColor =      "black"
+     font =         "xft:Font Awesome 5 Free Solid:style=solid:size=10, Font Awesome 5 Brands Regular:style=Regular, Hack:size=10:Bold:antialias=true"
+   , bgColor =      "black" 
    , fgColor =      "white"
    , position =     Top
    , border =       BottomB
@@ -11,7 +11,7 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = " %StdinReader% }{ %battery% | %memory% | %dynnetwork% | %date% "
+   , template = "  %StdinReader% }{ %battery% | %memory% | %dynnetwork% | %date% "
 
    -- general behavior
    , lowerOnStart =     True    -- send to bottom of window stack on start
@@ -49,8 +49,8 @@ Config {
                              , "--" 
                                        , "-o"	, "<left>% (<timeleft>)"
                                        , "-O"	, "<fc=#dAA520>Charging</fc>"
-                                       , "-i"	, "<fc=#006000>Charged</fc>"
+                                       , "-i"	, "<fc=green>Charged</fc>"
                              ] 50
 
-        , Run Date           "<fc=white>%F (%a) %T</fc>" "date" 10 ]
+        , Run Date           "<fc=white>%F %a %T</fc>" "date" 10 ]
    }
