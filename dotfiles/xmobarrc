@@ -22,7 +22,7 @@ Config {
    , persistent =       True    -- enable/disable hiding (True = disabled)
 
    , commands = 
-        [ Run DynNetwork     [ "--template" , "Speed <tx> KB/s"
+        [ Run DynNetwork     [ "--template" , "Speed: <tx> KB/s"
                              , "--Low"      , "102400"       
                              , "--High"     , "512000"      
                              , "--low"      , "red"
@@ -31,16 +31,16 @@ Config {
                              ] 1
                           
         , Run Memory         [ "--template" ,"Mem: <usedratio>%"
-                             , "--Low"      , "20"        -- units: %
-                             , "--High"     , "90"        -- units: %
+                             , "--Low"      , "20"       
+                             , "--High"     , "90"       
                              , "--low"      , "green"
                              , "--normal"   , "darkorange"
                              , "--high"     , "red"
                              ] 10
 
         , Run Battery        [ "--template" , "Batt: <acstatus>"
-                             , "--Low"      , "10"        -- units: %
-                             , "--High"     , "80"        -- units: %
+                             , "--Low"      , "10"       
+                             , "--High"     , "80"       
                              , "--low"      , "red"
                              , "--normal"   , "orange"
                              , "--high"     , "green"
