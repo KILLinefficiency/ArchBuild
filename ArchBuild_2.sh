@@ -14,9 +14,12 @@ locale-gen
 echo "batcave" >> /etc/hostname
 echo "127.0.0.1 localhost batcave" >> /etc/hosts
 
+clear
+echo "Set Root Password..."
 passwd root
 
 useradd -m -d /home/shreyas shreyas
+echo "Set Password for shreyas..."
 passwd shreyas
 echo "shreyas ALL=(ALL) ALL" >> /etc/sudoers
 
@@ -25,7 +28,5 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot --noconfirm
 
-pacman -S nano vim ttf-hack neofetch htop bat groff
+pacman -S nano vim ttf-hack neofetch htop bat groff --noconfirm
 pacman -Rns xorg-fonts-75dpi xorg-fonts-100dpi
-
-exit
