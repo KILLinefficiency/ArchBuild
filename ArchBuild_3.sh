@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S alacritty --noconfirm
+sudo pacman -S alacritty feh picom xmonad xmonad-contrib xmobar ttf-font-awesome alsa-utils pamixer --noconfirm
 
 ADDRESS=$(pwd)
 
@@ -22,5 +22,3 @@ cp dotfiles/alacritty/alacritty.yml ~/config/alacritty/alacritty.yml
 mkdir ~/.xmonad
 cp dotfiles/xmonad.hs ~/.xmonad/xmonad.hs
 cp dotfiles/xmobarrc ~/.xmobarrc
-
-sudo pacman -S feh picom xmonad xmonad-contrib xmobar
