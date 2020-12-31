@@ -1,7 +1,7 @@
 Config { 
 
    -- appearance
-     font =         "xft:Hack:size=10:bold:antialias=true"
+     font =         "xft:Font Awesome 5 Free Solid:style=solid:size=10, Hack:size=10:Bold:antialias=true"
    , bgColor =      "black"
    , fgColor =      "white"
    , position =     Top
@@ -22,16 +22,16 @@ Config {
    , persistent =       True    -- enable/disable hiding (True = disabled)
 
    , commands = 
-        [ Run DynNetwork     [ "--template" , "Speed: <tx> KB/s"
+        [ Run DynNetwork     [ "--template" , " <tx> KB/s"
                              , "--Low"      , "102400"       
                              , "--High"     , "512000"      
                              , "--low"      , "red"
                              , "--normal"   , "darkorange"
                              , "--high"     , "green"
-                             ] 1
+                             ] 10
         , Run StdinReader
 
-        , Run Memory         [ "--template" , "RAM: <usedratio>%"
+        , Run Memory         [ "--template" , " <usedratio>%"
                              , "--Low"      , "20"       
                              , "--High"     , "90"       
                              , "--low"      , "green"
@@ -39,7 +39,7 @@ Config {
                              , "--high"     , "red"
                              ] 10
 
-        , Run Battery        [ "--template" , "Power: <acstatus>"
+        , Run Battery        [ "--template" , " <acstatus>"
                              , "--Low"      , "10"       
                              , "--High"     , "80"       
                              , "--low"      , "red"
