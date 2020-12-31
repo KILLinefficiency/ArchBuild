@@ -11,7 +11,7 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = "  %memory% | %dynnetwork% }{ %battery% | %date%  "
+   , template = " %StdinReader% }{ %battery% | %memory% | %dynnetwork% | %date% "
 
    -- general behavior
    , lowerOnStart =     True    -- send to bottom of window stack on start
@@ -29,8 +29,9 @@ Config {
                              , "--normal"   , "darkorange"
                              , "--high"     , "green"
                              ] 1
-                          
-        , Run Memory         [ "--template" ,"Mem: <usedratio>%"
+        , Run StdinReader
+
+        , Run Memory         [ "--template" , "RAM: <usedratio>%"
                              , "--Low"      , "20"       
                              , "--High"     , "90"       
                              , "--low"      , "green"
@@ -38,11 +39,11 @@ Config {
                              , "--high"     , "red"
                              ] 10
 
-        , Run Battery        [ "--template" , "Batt: <acstatus>"
+        , Run Battery        [ "--template" , "Power: <acstatus>"
                              , "--Low"      , "10"       
                              , "--High"     , "80"       
                              , "--low"      , "red"
-                             , "--normal"   , "orange"
+                             , "--normal"   , "darkorange"
                              , "--high"     , "green"
 
                              , "--" 
