@@ -19,3 +19,8 @@ cp dotfiles/xinitrc ~/.xinitrc
 cp dotfiles/vimrc ~/.vimrc
 cp dotfiles/alacritty/alacritty.yml ~/config/alacritty/alacritty.yml
 
+mkdir ~/.xmonad
+cp dotfiles/xmonad.hs ~/.xmonad/xmonad.hs
+cp dotfiles/xmobarrc ~/.xmobarrc
+
+sudo pacman -S feh picom xmonad xmonad-contrib xmobar
