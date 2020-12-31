@@ -1,0 +1,55 @@
+Config { 
+
+   -- appearance
+     font =         "xft:Hack:size=10:bold:antialias=true"
+   , bgColor =      "black"
+   , fgColor =      "white"
+   , position =     Top
+   , border =       BottomB
+   , borderColor =  "black"
+
+   -- layout
+   , sepChar =  "%"   -- delineator between plugin names and straight text
+   , alignSep = "}{"  -- separator between left-right alignment
+   , template = "  %memory% | %dynnetwork% }{ %battery% | %date%  "
+
+   -- general behavior
+   , lowerOnStart =     True    -- send to bottom of window stack on start
+   , hideOnStart =      False   -- start with window unmapped (hidden)
+   , allDesktops =      True    -- show on all desktops
+   , overrideRedirect = True    -- set the Override Redirect flag (Xlib)
+   , pickBroadest =     False   -- choose widest display (multi-monitor)
+   , persistent =       True    -- enable/disable hiding (True = disabled)
+
+   , commands = 
+        [ Run DynNetwork     [ "--template" , "Speed <tx> KB/s"
+                             , "--Low"      , "102400"       
+                             , "--High"     , "512000"      
+                             , "--low"      , "red"
+                             , "--normal"   , "darkorange"
+                             , "--high"     , "green"
+                             ] 1
+                          
+        , Run Memory         [ "--template" ,"Mem: <usedratio>%"
+                             , "--Low"      , "20"        -- units: %
+                             , "--High"     , "90"        -- units: %
+                             , "--low"      , "green"
+                             , "--normal"   , "darkorange"
+                             , "--high"     , "red"
+                             ] 10
+
+        , Run Battery        [ "--template" , "Batt: <acstatus>"
+                             , "--Low"      , "10"        -- units: %
+                             , "--High"     , "80"        -- units: %
+                             , "--low"      , "red"
+                             , "--normal"   , "orange"
+                             , "--high"     , "green"
+
+                             , "--" 
+                                       , "-o"	, "<left>% (<timeleft>)"
+                                       , "-O"	, "<fc=#dAA520>Charging</fc>"
+                                       , "-i"	, "<fc=#006000>Charged</fc>"
+                             ] 50
+
+        , Run Date           "<fc=white>%F (%a) %T</fc>" "date" 10 ]
+   }
