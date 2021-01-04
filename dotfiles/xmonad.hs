@@ -25,7 +25,6 @@ myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 
 myNormalBorderColor  = "#696969"
 myFocusedBorderColor = "#b19cd9"
---myFocusedBorderColor = "#51FF0D"
 
 -- KEY BINDINGS
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
@@ -67,6 +66,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Switch to Master Window
     , ((modm,                 xK_m     ), windows W.focusMaster  )
+
+	
+	-- wallpaper changer
+	, ((modm .|. shiftMask,   xK_b     ), spawn "chbg.sh")
 
     -- Swap Current Window and Master Window
     , ((modm .|. shiftMask,   xK_Return), windows W.swapMaster)
