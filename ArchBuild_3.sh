@@ -18,6 +18,7 @@ cp dotfiles/bashrc ~/.bashrc
 cp dotfiles/xinitrc ~/.xinitrc
 cp dotfiles/vimrc ~/.vimrc
 cp dotfiles/alacritty/alacritty.yml ~/config/alacritty/alacritty.yml
+cp -r dotfiles/tools ~/.tools
 
 mkdir ~/.xmonad
 cp dotfiles/xmonad.hs ~/.xmonad/xmonad.hs
