@@ -7,5 +7,6 @@ GREEN="\e[32;1m"
 YELLOW="\e[33;1m"
 
 alias ls="ls --color"
+export PATH="$PATH:$HOME/.tools"
 
 PS1="\[$YELLOW\] \[$GREEN\]\u\[$DEFAULT_BOLD\]@\[$RED\]\h\[$DEFAULT\] \W\[$YELLOW\] \[$DEFAULT\]   "
