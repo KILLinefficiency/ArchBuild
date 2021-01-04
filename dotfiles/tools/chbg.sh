@@ -24,4 +24,4 @@ fi
 
 echo "$next" > $current_bg_address
 
-feh --bg-scale "$address/$next.jpg"
+feh --bg-scale "$address/$next.jpg" 2> /dev/null
