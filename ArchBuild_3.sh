@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo rm -rf /ArchBuild
 sudo pacman -S alacritty feh picom xmonad xmonad-contrib xmobar ttf-font-awesome alsa-utils pamixer --noconfirm
 
 ADDRESS=$(pwd)
