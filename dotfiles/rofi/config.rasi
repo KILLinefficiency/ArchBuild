@@ -1,0 +1,10 @@
+configuration {
+	padding: 5;
+	sort: true;
+	font: "hack 12";
+	show-match: false;
+	disable-history: true;
+	modi: "window,drun,ssh,combi";
+	combi-modi: "window,drun,ssh";
+}
+@import "/usr/share/rofi/themes/Monokai.rasi"
