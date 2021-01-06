@@ -37,8 +37,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0, xF86XK_AudioLowerVolume),      spawn "pactl set-sink-volume @DEFAULT_SINK@ -10%")
     , ((0, xF86XK_AudioRaiseVolume),      spawn "pactl set-sink-volume @DEFAULT_SINK@ +10%")
 
-    -- dmenu
-    , ((modm,                 xK_p     ), spawn "dmenu_run")
+    -- rofi
+    , ((modm,                 xK_p     ), spawn "rofi -show run")
 
     -- launch gmrun
     , ((modm,                 xK_f     ), spawn "firefox")
