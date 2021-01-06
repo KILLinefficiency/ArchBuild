@@ -1,5 +1,4 @@
 configuration {
-	padding: 5;
 	sort: true;
 	font: "hack 12";
 	show-match: false;
