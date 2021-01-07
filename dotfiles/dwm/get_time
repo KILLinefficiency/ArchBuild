@@ -1,6 +1,0 @@
-#!/bin/bash
-
-while true; do
-	xsetroot -name "$(date | awk '{print $2 " " $3 " " $4 " " $5}')"
-	sleep 1
-done
