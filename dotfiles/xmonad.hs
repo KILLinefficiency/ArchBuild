@@ -41,12 +41,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                 xK_p     ), spawn "rofi -show run")
 
     -- Lock
-	, ((modm .|. shiftMask,   xK_l     ), spawn "lock.sh")
+    , ((modm .|. shiftMask,   xK_l     ), spawn "lock.sh")
 
-	-- Wallaper Changer
-	, ((modm .|. shiftMask,   xK_b     ), spawn "chbg.sh")
+    -- Wallaper Changer
+    , ((modm .|. shiftMask,   xK_b     ), spawn "chbg.sh")
     
-	-- launch gmrun
+    -- launch gmrun
     , ((modm,                 xK_f     ), spawn "firefox")
 
     -- Close Current Window
