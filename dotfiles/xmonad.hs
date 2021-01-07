@@ -40,7 +40,13 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- rofi
     , ((modm,                 xK_p     ), spawn "rofi -show run")
 
-    -- launch gmrun
+    -- Lock
+	, ((modm .|. shiftMask,   xK_l     ), spawn "lock.sh")
+
+	-- Wallaper Changer
+	, ((modm .|. shiftMask,   xK_b     ), spawn "chbg.sh")
+    
+	-- launch gmrun
     , ((modm,                 xK_f     ), spawn "firefox")
 
     -- Close Current Window
@@ -66,10 +72,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Switch to Master Window
     , ((modm,                 xK_m     ), windows W.focusMaster  )
-
-	
-	-- wallpaper changer
-	, ((modm .|. shiftMask,   xK_b     ), spawn "chbg.sh")
 
     -- Swap Current Window and Master Window
     , ((modm .|. shiftMask,   xK_Return), windows W.swapMaster)
