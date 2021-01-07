@@ -24,7 +24,7 @@ passwd root
 
 useradd -m -d /home/${MYUSERNAME} ${MYUSERNAME} --badnames
 echo "Set Password for ${MYUSERNAME}..."
-passwd shreyas
+passwd ${MYUSERNAME}
 echo "${MYUSERNAME} ALL=(ALL) ALL" >> /etc/sudoers
 
 grub-install /dev/sda --efi-directory="/boot"
