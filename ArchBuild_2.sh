@@ -32,5 +32,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot --noconfirm
 
+pacman -S alsa-utils pamixer asoundconf --noconfirm
+gpasswd -a ${MYUSERNAME} audio
+
 pacman -S nano vim ttf-hack neofetch htop bat groff --noconfirm
 pacman -Rns xorg-fonts-75dpi xorg-fonts-100dpi
