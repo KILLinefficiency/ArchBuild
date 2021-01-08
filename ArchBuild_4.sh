@@ -1,6 +1,10 @@
 #!/bin/bash
 
+MYSOUNDCARD="Intel"
+
 ADDRESS=$(pwd)
+
+asoundconf set-default-card ${MYSOUNDCARD}
 
 mkdir ~/Documents ~/Downloads ~/Music ~/Videos ~/Pictures ~/.aur
 cd ~/.aur
