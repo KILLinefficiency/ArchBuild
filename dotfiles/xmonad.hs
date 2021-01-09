@@ -17,7 +17,7 @@ myFocusFollowsMouse = True
 myClickJustFocuses :: Bool
 myClickJustFocuses = False
 
-myBorderWidth   = 1
+myBorderWidth   = 2
 
 myModMask       = mod4Mask
 
