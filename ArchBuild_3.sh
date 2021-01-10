@@ -15,8 +15,11 @@ sudo pacman -S firefox chromium opera --noconfirm
 # Developer Tools:
 sudo pacman -S python3 python-pip gcc clang nasm --noconfirm
 
-# Virtualization:
+# Virtualization Tools:
 sudo pacman -S qemu virtualbox virtualbox-host-modules-arch --noconfirm
+
+# Document Readers:
+sudo pacman -S zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps --noconfirm
 
 # Media:
 sudo pacman -S vlc --noconfirm
@@ -24,7 +27,7 @@ sudo pacman -S vlc --noconfirm
 # Others:
 sudo pacman -S neofetch htop bat imagemagick man tree zip unzip wget --noconfirm
 
-# Drivers:
+# Patching Drivers:
 sudo modprobe vboxdrv
 
 # Setting up the .bashrc file for the root user:
