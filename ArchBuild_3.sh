@@ -26,3 +26,6 @@ sudo pacman -S neofetch htop bat imagemagick man tree zip unzip wget --noconfirm
 
 # Drivers:
 sudo modprobe vboxdrv
+
+# Setting up the .bashrc file for the root user:
+sudo cp dotfiles/bashrc_root /root/.bashrc
