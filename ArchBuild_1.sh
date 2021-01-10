@@ -30,4 +30,6 @@ pacstrap /mnt base linux linux-firmware
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
+cp -r ../ArchBuild /mnt
+
 arch-chroot /mnt
