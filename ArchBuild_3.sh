@@ -22,7 +22,7 @@ sudo pacman -S qemu virtualbox virtualbox-host-modules-arch --noconfirm
 sudo pacman -S zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps --noconfirm
 
 # Media:
-sudo pacman -S vlc --noconfirm
+sudo pacman -S vlc rhythmbox --noconfirm
 
 # Fonts:
 sudo pacman -S ttf-hack ttf-font-awesome --noconfirm
