@@ -3,7 +3,7 @@ configuration {
 	font: "hack 12";
 	show-match: false;
 	disable-history: true;
-	modi: "window,drun,ssh,combi";
+	modi: "window,drun,ssh,combi,run";
 	combi-modi: "window,drun,ssh";
 }
 @import "/usr/share/rofi/themes/Monokai.rasi"
