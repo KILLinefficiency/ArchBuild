@@ -33,9 +33,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm,                 xK_Return), spawn $ XMonad.terminal conf)
     
     -- Volume Keys
-    , ((0, xF86XK_AudioMute),             spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle")
-    , ((0, xF86XK_AudioLowerVolume),      spawn "pactl set-sink-volume @DEFAULT_SINK@ -10%")
-    , ((0, xF86XK_AudioRaiseVolume),      spawn "pactl set-sink-volume @DEFAULT_SINK@ +10%")
+    , ((modm,                 xK_u     ), spawn "amixer -q sset Master 5-")
+    , ((modm,                 xK_i     ), spawn "amixer -q sset Master 5+")
+    , ((modm .|. shiftMask,   xK_m     ), spawn "amixer -q sset Master 0%")
 
     -- rofi
     , ((modm,                 xK_p     ), spawn "rofi -show run")
