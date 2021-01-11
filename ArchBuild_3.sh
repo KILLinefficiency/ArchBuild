@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Tools for the Window Manager:
-sudo pacman -S alacritty feh picom xmonad xmoand-contrib xmobar ttf-hack ttf-font-awesome rofi i3lock --noconfirm
+sudo pacman -S alacritty feh picom xmonad xmoand-contrib xmobar rofi i3lock --noconfirm
 
 # Editors:
 sudo pacman -S nano vim --noconfirm
@@ -24,6 +24,9 @@ sudo pacman -S zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps --no
 # Media:
 sudo pacman -S vlc --noconfirm
 
+# Fonts:
+sudo pacman -S ttf-hack ttf-font-awesome --noconfirm
+
 # Others:
 sudo pacman -S neofetch htop bat imagemagick man tree zip unzip wget --noconfirm
 
@@ -32,3 +35,6 @@ sudo modprobe vboxdrv
 
 # Setting up the .bashrc file for the root user:
 sudo cp dotfiles/bashrc_root /root/.bashrc
+
+# Setting up dotfiles that have root user ownership:
+sudo cp dotfiles/picom.conf /etc/xdg/picom.conf
