@@ -28,7 +28,7 @@ sudo pacman -S vlc rhythmbox --noconfirm
 sudo pacman -S ttf-hack ttf-font-awesome --noconfirm
 
 # Others:
-sudo pacman -S neofetch htop bat imagemagick man tree zip unzip wget screenkey --noconfirm
+sudo pacman -S neofetch htop bashtop bat imagemagick man tree zip unzip wget screenkey gparted --noconfirm
 
 # Patching Drivers:
 sudo modprobe vboxdrv
@@ -36,5 +36,8 @@ sudo modprobe vboxdrv
 # Setting up the .bashrc file for the root user:
 sudo cp dotfiles/bashrc_root /root/.bashrc
 
-# Setting up dotfiles that have root user ownership:
+# Setting up dotfiles that need root user ownership:
 sudo cp dotfiles/picom.conf /etc/xdg/picom.conf
+sudo cp dotfiles/grub /etc/default/grub
+sudo cp dotfiles/grub_bg.png /root/grub_bg.png
+sudo grub-mkconfig -o /boot/grub/grub.cfg
