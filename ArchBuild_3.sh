@@ -7,7 +7,7 @@ sudo pacman -S alacritty feh picom xmonad xmoand-contrib xmobar rofi i3lock --no
 sudo pacman -S nano vim --noconfirm
 
 # File Managers:
-sudo pacman -S ranger --noconfirm
+sudo pacman -S ranger nautilus --noconfirm
 
 # Browsers:
 sudo pacman -S firefox chromium opera --noconfirm
@@ -28,7 +28,7 @@ sudo pacman -S vlc rhythmbox --noconfirm
 sudo pacman -S ttf-hack ttf-font-awesome --noconfirm
 
 # Others:
-sudo pacman -S neofetch htop bat imagemagick man tree zip unzip wget --noconfirm
+sudo pacman -S neofetch htop bat imagemagick man tree zip unzip wget screenkey --noconfirm
 
 # Patching Drivers:
 sudo modprobe vboxdrv
