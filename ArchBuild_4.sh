@@ -27,5 +27,7 @@ cp dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 cp -r dotfiles/tools ~/.tools
 
-cp dotfiles/xmonad.hs ~/.xmonad/xmonad.hs
 cp dotfiles/xmobarrc ~/.xmobarrc
+cp dotfiles/xmonad.hs ~/.xmonad/xmonad.hs
+
+xmonad --recompile
