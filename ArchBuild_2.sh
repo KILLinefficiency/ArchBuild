@@ -4,9 +4,10 @@ MYUSERNAME="shreyas"
 MYHOSTNAME="batcave"
 MYTIMEZONE="Asia/Kolkata"
 
-pacman -Sy git dhcpcd networkmanager grub efibootmgr base-devel --noconfirm
+pacman -Sy git dhcpcd networkmanager grub efibootmgr base-devel bluez bluez-utils bluez-tools --noconfirm
 
 systemctl enable dhcpcd
+systemctl enable bluetooth
 systemctl enable NetworkManager
 
 ln -sf /usr/share/zoneinfo/${MYTIMEZONE} /etc/localtime
