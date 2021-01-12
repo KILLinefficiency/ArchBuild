@@ -1,5 +1,7 @@
+#!/bin/bash
+
 picom -f &
 export PATH="$PATH:$HOME/.tools"
 feh --bg-scale ~/.tools/bg/"$(cat ~/.tools/current_bg.txt).jpg" &
 
-exec xmonad
+exec xmonad 
