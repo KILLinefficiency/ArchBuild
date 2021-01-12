@@ -37,8 +37,11 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                 xK_i     ), spawn "amixer -q sset Master 5+")
     , ((modm .|. shiftMask,   xK_m     ), spawn "amixer -q sset Master 0%")
 
-    -- rofi
+    -- Rofi
     , ((modm,                 xK_p     ), spawn "rofi -show run")
+
+	-- Nautilus
+    , ((modm,                 xK_s     ), spawn "nautilus")
 
     -- Lock
     , ((modm .|. shiftMask,   xK_l     ), spawn "lock.sh")
