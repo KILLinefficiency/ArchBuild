@@ -21,6 +21,9 @@ sudo pacman -S qemu virtualbox virtualbox-host-modules-arch --noconfirm
 # Document Readers:
 sudo pacman -S zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps --noconfirm
 
+# Torrent Client:
+sudo pacman -S transmission-qt --noconfirm
+
 # Media:
 sudo pacman -S vlc rhythmbox --noconfirm
 
