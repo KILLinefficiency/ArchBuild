@@ -3,6 +3,7 @@ map R rotate
 map r reload
 map i recolor
 set page-padding 1
+set statusbar-bg "#3c3836"
 set statusbar-v-padding 0
 set statusbar-h-padding 0
 set selection-clipboard clipboard
