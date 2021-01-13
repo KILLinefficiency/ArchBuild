@@ -33,14 +33,14 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm,                 xK_Return), spawn $ XMonad.terminal conf)
     
     -- Volume Keys
-    , ((modm,                 xK_u     ), spawn "amixer -q sset Master 5-")
-    , ((modm,                 xK_i     ), spawn "amixer -q sset Master 5+")
-    , ((modm .|. shiftMask,   xK_m     ), spawn "amixer -q sset Master 0%")
+    , ((modm,                 xK_u     ), spawn "amixer -q set Master 5dB-")
+    , ((modm,                 xK_i     ), spawn "amixer -q set Master 5dB+")
+    , ((modm .|. shiftMask,   xK_m     ), spawn "amixer -q sset Master toggle")
 
     -- Rofi
     , ((modm,                 xK_p     ), spawn "rofi -show run")
 
-	-- Nautilus
+    -- Nautilus
     , ((modm,                 xK_s     ), spawn "nautilus")
 
     -- Lock
@@ -49,7 +49,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Wallaper Changer
     , ((modm .|. shiftMask,   xK_b     ), spawn "chbg.sh")
     
-    -- launch gmrun
+    -- Firefox
     , ((modm,                 xK_f     ), spawn "firefox")
 
     -- Close Current Window
@@ -61,7 +61,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Reset the Layout
     , ((modm .|. shiftMask,   xK_space ), setLayout $ XMonad.layoutHook conf)
 
-    -- "Resize viewed windows to the correct size
+    -- Resize viewed windows to the correct size
     , ((modm,                 xK_n     ), refresh)
 
     -- Switch Focus
@@ -97,7 +97,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Increment the number of windows in the master area
     , ((modm,                 xK_comma ), sendMessage (IncMasterN 1))
 
-    -- Deincrement the number of windows in the master area
+    -- Decrement the number of windows in the master area
     , ((modm,                xK_period), sendMessage (IncMasterN (-1)))
 
     -- Toggle the status bar gap
