@@ -177,34 +177,20 @@ $ ./ArchBuild_4.sh
 
 ## Tools that I use
 
-Here's a list of all the tools that I use and come with this Arch Linux installation.
+Here's a table of all the tools that I use and come with this Arch Linux installation.
 
-* Windows Manager: XMonad
-
-* Status Bar: Xmobar
-
-* Wallpaper Setter: Feh
-
-* Compositor: Picom
-
-* Lock: i3lock
-
-* Application Lanucher: Rofi
-
-* Terminal: Alacritty
-
-* Editors: Nano, Vim
-
-* File Managers: Ranger, Nautilus
-
-* Web Browsers: Firefox, Chromium, Opera
-
-* Virtualization Tools: QEMU, Virtualbox
-
-* Document Reader: Zathura
-
-* Torrent Client: Transmission
-
-* Media Tools: Rhythmbox, VLC Media Player
-
-* Fonts: Hack, Font Awesome
+| Window Manager | XMonad |
+| Status Bar | Xmobar |
+| Wallpaper Setter | Feh |
+| Compositor | Picom |
+| Lock | i3lock |
+| Application Lanucher | Rofi |
+| Terminal | Alacritty |
+| Editors | Nano, Vim |
+| File Managers | Ranger, Nautilus |
+| Web Browsers | Firefox, Chromium, Opera |
+| Virtualization Tools | QEMU, Virtualbox |
+| Document Reader | Zathura |
+| Torrent Client | Transmission |
+| Media Tools |  Rhythmbox, VLC Media Player |
+| Fonts | Hack, Font Awesome |
