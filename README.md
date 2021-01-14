@@ -8,7 +8,9 @@ The user must have an active internet connection and the Arch Linux ISO ready. I
 
 ## Using the scripts
 
-1. Fire your VM and boot into the Arch Linux Live ISO. Install Git:
+### Stage 1
+
+Fire your VM and boot into the Arch Linux Live ISO. Install Git:
 
 ```
 pacman -Sy git --noconfirm
@@ -60,3 +62,79 @@ Run the ``Arch_Build_1.sh`` script:
 ```
 
 The ``ArchBuild_1.sh`` script ends after putting you inside the ``arch-chroot`` environment of the newly installed system.
+
+### Stage 2
+
+After entering the ``arch-chroot`` environment, you'll find the cloned repository. ``cd`` into the repository:
+
+```
+cd ArchBuild
+```
+
+Stage 2 involves running the second script, ``ArchBuild_2.sh``. 
+
+This script sets things like, locales, hostname, services, users, passwords, xorg, GRUB, etc.
+
+Edit the following lines in ``ArchBuild_2.sh`` script to fit your needs:
+
+```
+MYUSERNAME="shreyas"
+MYHOSTNAME="batcave"
+MYTIMEZONE="Asia/Kolkata"
+```
+
+Run the ``ArchBuild_2.sh`` script:
+
+```
+./ArchBuild_2.sh
+```
+
+After ``ArcBuild_2.sh`` is donw running, you can either stay in the ``arch-chroot`` environment or boot into the newly installed bare system.
+
+**Booting into the system:**
+
+Exit the ``arch-chroot`` environment:
+
+```
+exit
+```
+
+Unmount the partitions:
+
+```
+umount -R /mnt
+```
+
+Reboot:
+
+```
+reboot
+```
+
+Now boot into the installed system with your username and password.
+
+## Stage 3
+
+Clone the repository again:
+
+```
+$ git clone https://www.github.com/KILLinefficiency/ArchBuild.sh
+```
+
+``cd`` into the cloned repository:
+
+```
+$ cd ArchBuild
+```
+
+Run the ``ArchBuild_3.sh`` script using ``sudo``:
+
+```
+$ sudo ./ArchBuild_3.sh
+```
+
+``ArchBuild_3.sh`` script downloads and installs all the necessary packages that I use.
+
+It also performs some operations that requires the root user's permission.
+
+### Stage 4
