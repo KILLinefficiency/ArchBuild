@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo pacman -Sy --noconfirm
+
 # Tools for the Window Manager:
 sudo pacman -S alacritty feh picom xmonad xmoand-contrib xmobar rofi i3lock --noconfirm
 
@@ -18,13 +20,13 @@ sudo pacman -S python3 python-pip gcc clang nasm --noconfirm
 # Virtualization Tools:
 sudo pacman -S qemu virtualbox virtualbox-host-modules-arch --noconfirm
 
-# Document Readers:
+# Document Reader:
 sudo pacman -S zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps --noconfirm
 
 # Torrent Client:
 sudo pacman -S transmission-qt --noconfirm
 
-# Media:
+# Media Tools:
 sudo pacman -S vlc rhythmbox --noconfirm
 
 # Fonts:
