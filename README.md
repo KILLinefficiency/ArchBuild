@@ -6,6 +6,8 @@ The entire installation is divided into four Bash shell scripts.
 
 The user must have an active internet connection and the Arch Linux ISO ready. It is advised to set up Arch Linux using these scripts inside a Virtual Machine.
 
+* [Making the install scripts your own](#making-the-install-scripts-your-own)
+
 * [Using the install scripts](#using-the-install-scripts)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - [Stage 1](#stage-1)
@@ -19,6 +21,40 @@ The user must have an active internet connection and the Arch Linux ISO ready. I
 * [Tools that I use](#tools-that-i-use)
 
 * [My XMonad Keybindings](#my-xmonad-keybindings)
+
+## Making the install scripts your own
+
+Some of the settings in the install scripts are very specific to what I use. Like, username, hostname, timezone, disk, etc.
+
+You can edit the scripts to change these things according to your needs. Here's how:
+
+**Editing ArchBuild_1.sh**
+
+**ArchBuid_1.sh** by default installs the system to disk ``sda``. If you dont want to install the system to ``sda``, change the following lines in the ``ArchBuild_1.sh`` script to fit your need:
+
+```
+DISK="sda"
+BOOT="sda1"
+ROOT="sda2"
+```
+
+**Editing ArchBuild_2.sh**
+
+Edit the following lines in ``ArchBuild_2.sh`` script to fit your needs of username, hostname and timezone:
+
+```
+MYUSERNAME="shreyas"
+MYHOSTNAME="batcave"
+MYTIMEZONE="Asia/Kolkata"
+```
+
+**Editing ArchBuild_4.sh**
+
+Edit this line in the ``ArchBuild_4.sh`` script to set your own soundcard:
+
+```
+MYSOUNDCARD="Intel"
+```
 
 ## Using the install scripts
 
@@ -50,28 +86,19 @@ The script will start ``fdisk`` to partition the disk.
 
 My Arch setup uses 512 MB of disk for the Boot partition and the rest of the disk for Arch Linux.
 
-
-**ArchBuid_1.sh** by default installs the system to disk ``sda``. If you dont want to install the system to ``sda``, change the following lines in the ``ArchBuild_1.sh`` script to fit your need:
-
-```
-DISK="sda"
-BOOT="sda1"
-ROOT="sda2"
-```
-
 Partition 1: /dev/sdX1 -> boot partition.
 
 Partition 2: /dev/sdX2 -> root partition.
 
-/dev/sdX1 :
-  Size: 512 MB. Sector: 2048 to 1050632
-  Type: UEFI
-  Bootable: Yes
-
-/dev/sdX2
-  Size : Rest of the disk. Sector: Rest of the disk.
-  Type : Linux
-  Bootable: No
+> /dev/sdX1 :
+> &nbsp;&nbsp; Size: 512 MB. Sector: 2048 to 1050632
+> &nbsp;&nbsp; Type: UEFI
+> &nbsp;&nbsp; Bootable: Yes
+> 
+> /dev/sdX2
+> &nbsp;&nbsp; Size : Rest of the disk. Sector: Rest of the disk.
+> &nbsp;&nbsp; Type : Linux
+> &nbsp;&nbsp; Bootable: No
 
 Run the ``Arch_Build_1.sh`` script:
 
@@ -92,14 +119,6 @@ cd ArchBuild
 Stage 2 involves running the second script, ``ArchBuild_2.sh``. 
 
 This script sets things like, locales, hostname, services, users, passwords, xorg, GRUB, etc.
-
-Edit the following lines in ``ArchBuild_2.sh`` script to fit your needs:
-
-```
-MYUSERNAME="shreyas"
-MYHOSTNAME="batcave"
-MYTIMEZONE="Asia/Kolkata"
-```
 
 Run the ``ArchBuild_2.sh`` script:
 
@@ -164,12 +183,6 @@ This script copies all the configuration files I use on the newly installed syst
 **This script is not supposed to be run as the root user.**
 
 Therefore, it's recommended to boot into the installed system, login with your username and password. 
-
-Edit this line in the ``ArchBuild_4.sh`` script to set your own soundcard:
-
-```
-MYSOUNDCARD="Intel"
-```
 
 Run the ``ArchBuild_4.sh`` script:
 
