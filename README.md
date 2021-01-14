@@ -9,8 +9,11 @@ The user must have an active internet connection and the Arch Linux ISO ready. I
 * [Using the scripts](#using-the-scripts)
 
 &nbsp;&nbsp;&nbsp;&nbsp; * [Stage 1](#stage-1)
+
 &nbsp;&nbsp;&nbsp;&nbsp; * [Stage 2](#stage-2)
+
 &nbsp;&nbsp;&nbsp;&nbsp; * [Stage 3](#stage-3)
+
 &nbsp;&nbsp;&nbsp;&nbsp; * [Stage 4](#stage-4)
 
 ## Using the scripts
