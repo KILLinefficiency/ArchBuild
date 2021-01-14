@@ -6,7 +6,7 @@ The entire installation is divided into four Bash shell scripts.
 
 The user must have an active internet connection and the Arch Linux ISO ready. It is advised to set up Arch Linux using these scripts inside a Virtual Machine.
 
-* [Using the scripts](#using-the-scripts)
+* [Using the install scripts](#using-the-install-scripts)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - [Stage 1](#stage-1)
 
@@ -18,7 +18,9 @@ The user must have an active internet connection and the Arch Linux ISO ready. I
 
 * [Tools that I use](#tools-that-i-use)
 
-## Using the scripts
+* [My XMonad Keybindings](#my-xmonad-keybindings)
+
+## Using the install scripts
 
 ### Stage 1
 
@@ -199,3 +201,5 @@ Here's a table of all the tools that I use and come with this Arch Linux install
 | Torrent Client | Transmission |
 | Media Tools |  Rhythmbox, VLC Media Player |
 | Fonts | Hack, Font Awesome |
+
+## My XMonad Keybindings
