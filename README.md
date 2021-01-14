@@ -308,7 +308,7 @@ vsync = true
 
 ### XMonad does not start after a full system upgrade.
 
-1. Enter a TTY
+1. Enter a TTY.
 
 2. Recompile XMonad using:
 
