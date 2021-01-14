@@ -7,8 +7,8 @@ ROOT="sda2"
 pacman -Sy git --noconfirm
 timedatectl set-ntp true
 
-# Partition 1: /dev/sda1 -> boot partition.
-# Partition 2: /dev/sda2 -> root partition.
+# Partition 1: /dev/sdX1 -> boot partition.
+# Partition 2: /dev/sdX2 -> root partition.
 # /dev/sdX1 :
 #   Size: 512 MB. Sector: 2048 to 1050632
 #   Type: UEFI
