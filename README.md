@@ -8,13 +8,13 @@ The user must have an active internet connection and the Arch Linux ISO ready. I
 
 * [Using the scripts](#using-the-scripts)
 
-&nbsp;&nbsp;&nbsp;&nbsp; - [Stage 1](#stage-1)
+- [Stage 1](#stage-1)
 
-&nbsp;&nbsp;&nbsp;&nbsp; - [Stage 2](#stage-2)
+- [Stage 2](#stage-2)
 
-&nbsp;&nbsp;&nbsp;&nbsp; - [Stage 3](#stage-3)
+- [Stage 3](#stage-3)
 
-&nbsp;&nbsp;&nbsp;&nbsp; - [Stage 4](#stage-4)
+- [Stage 4](#stage-4)
 
 * [Tools that I use](#tools-that-i-use)
 
@@ -149,7 +149,7 @@ Run the ``ArchBuild_3.sh`` script using ``sudo``:
 $ sudo ./ArchBuild_3.sh
 ```
 
-``ArchBuild_3.sh`` script downloads and installs all the necessary packages that I use.
+``ArchBuild_3.sh`` script downloads and installs all the necessary packages that I use. See [Tools that I use](#tools-that-i-use) later.
 
 It also performs some operations that requires the root user's permission.
 
