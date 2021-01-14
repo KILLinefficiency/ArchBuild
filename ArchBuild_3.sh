@@ -14,6 +14,9 @@ sudo pacman -S ranger nautilus --noconfirm
 # Browsers:
 sudo pacman -S firefox chromium opera --noconfirm
 
+# Communication Tools:
+sudo pacman -S discord --noconfirm
+
 # Developer Tools:
 sudo pacman -S python3 python-pip gcc clang nasm --noconfirm
 
