@@ -6,7 +6,11 @@ The entire installation is divided into four Bash shell scripts.
 
 The user must have an active internet connection and the Arch Linux ISO ready. It is advised to set up Arch Linux using these scripts inside a Virtual Machine.
 
-[Using the scripts](#using-the-scripts)
+* [Using the scripts](#using-the-scripts)
+&nbsp;&nbsp;&nbsp;&nbsp; * [Stage 1](#stage-1)
+&nbsp;&nbsp;&nbsp;&nbsp; * [Stage 2](#stage-2)
+&nbsp;&nbsp;&nbsp;&nbsp; * [Stage 3](#stage-3)
+&nbsp;&nbsp;&nbsp;&nbsp; * [Stage 4](#stage-4)
 
 ## Using the scripts
 
