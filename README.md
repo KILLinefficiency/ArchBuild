@@ -8,11 +8,11 @@ The user must have an active internet connection and the Arch Linux ISO ready. I
 
 * [Making the install scripts your own](#making-the-install-scripts-your-own)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - [Editing ArchBuild_1.sh](#editing-archbuild_1.sh)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - [Editing ArchBuild_1.sh](#editing-archbuild_1sh)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - [Editing ArchBuild_2.sh](#editing-archbuild_2.sh)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - [Editing ArchBuild_2.sh](#editing-archbuild_2sh)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - [Editing ArchBuild_4.sh](#editing-archbuild_4.sh)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - [Editing ArchBuild_4.sh](#editing-archbuild_4sh)
 
 * [Using the install scripts](#using-the-install-scripts)
 
