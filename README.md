@@ -8,6 +8,12 @@ The user must have an active internet connection and the Arch Linux ISO ready. I
 
 * [Making the install scripts your own](#making-the-install-scripts-your-own)
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - [Editing ArchBuild_1.sh](#editing-archbuild_1.sh)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - [Editing ArchBuild_2.sh](#editing-archbuild_2.sh)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - [Editing ArchBuild_4.sh](#editing-archbuild_4.sh)
+
 * [Using the install scripts](#using-the-install-scripts)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - [Stage 1](#stage-1)
@@ -28,9 +34,9 @@ Some of the settings in the install scripts are very specific to what I use. Lik
 
 You can edit the scripts to change these things according to your needs. Here's how:
 
-**Editing ArchBuild_1.sh**
+### Editing ArchBuild_1.sh
 
-**ArchBuid_1.sh** by default installs the system to disk ``sda``. If you dont want to install the system to ``sda``, change the following lines in the ``ArchBuild_1.sh`` script to fit your need:
+``ArchBuid_1.sh`` by default installs the system to disk ``sda``. If you dont want to install the system to ``sda``, change the following lines in the ``ArchBuild_1.sh`` script to fit your need:
 
 ```
 DISK="sda"
@@ -38,7 +44,7 @@ BOOT="sda1"
 ROOT="sda2"
 ```
 
-**Editing ArchBuild_2.sh**
+### Editing ArchBuild_2.sh
 
 Edit the following lines in ``ArchBuild_2.sh`` script to fit your needs of username, hostname and timezone:
 
@@ -48,7 +54,7 @@ MYHOSTNAME="batcave"
 MYTIMEZONE="Asia/Kolkata"
 ```
 
-**Editing ArchBuild_4.sh**
+### Editing ArchBuild_4.sh
 
 Edit this line in the ``ArchBuild_4.sh`` script to set your own soundcard:
 
