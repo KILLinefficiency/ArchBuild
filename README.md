@@ -1,10 +1,14 @@
 # ArchBuild
 
-This repository contains all the Arch Linux install scripts written by me all of my config files.
+This repository contains my [Arch Linux](https://www.archlinux.org) installation scripts and all of my configuration files.
 
-The entire installation is divided into four Bash shell scripts.
+The entire installation is divided into four shell scripts.
 
 The user must have an active internet connection and the Arch Linux ISO ready. It is advised to set up Arch Linux using these scripts inside a Virtual Machine.
+
+**Read this entire README first before starting the installation using the scripts!**
+
+## Contents
 
 * [Making the install scripts your own](#making-the-install-scripts-your-own)
 
@@ -24,9 +28,13 @@ The user must have an active internet connection and the Arch Linux ISO ready. I
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - [Stage 4](#stage-4)
 
+* [Launching the Graphical Environment](#launching-the-graphical-environment)
+
 * [Tools that I use](#tools-that-i-use)
 
 * [My XMonad Keybindings](#my-xmonad-keybindings)
+
+* [A little help](#a-little-help)
 
 ## Making the install scripts your own
 
@@ -202,6 +210,14 @@ Run the ``ArchBuild_4.sh`` script:
 $ ./ArchBuild_4.sh
 ```
 
+## Launching the Graphical Environment
+
+Once that all the stages of installation are done, launch XMonad from a TTY using ``startx``:
+
+```
+$ startx
+```
+
 ## Tools that I use
 
 Here's a table of all the tools that I use and come with this Arch Linux installation.
@@ -265,3 +281,43 @@ I use the Super Key (Windows Key / Mod4 Key) as the Mod Key.
 | Control + Button1 | Floats a window. |
 | Control + Button3 | Resizes a floating window. |
 | Control + t | Resets the windows to tile mode. |
+
+## A little help
+
+Here are the problems that I have encountered while setting my Arch Linux up.
+
+The solutions are also provided in case you encounter similar problems too.
+
+### Picom (Compositor) does not work in a Virtual Machine.
+
+The compositor, Picom does not function properly inside a Virtual Machine. Solution to that problem:
+
+1. Open the file ``/etc/xdg/picom.conf`` in an editor:
+
+```
+$ sudo vim /etc/xdg/picom.conf
+```
+
+2. Comment the following line using ``#``:
+
+```
+vsync = true
+```
+
+3. Save and exit.
+
+### XMonad does not start after a full system upgrade.
+
+1. Enter a TTY
+
+2. Recompile XMonad using:
+
+```
+$ xmonad --recompile
+```
+
+3. Start the graphical environment:
+
+```
+$ startx
+```
