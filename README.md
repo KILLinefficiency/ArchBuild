@@ -187,7 +187,9 @@ Here's a table of all the tools that I use and come with this Arch Linux install
 | Compositor | Picom |
 | Lock | i3lock |
 | Application Lanucher | Rofi |
+| Bootloader | GRUB |
 | Terminal | Alacritty |
+| Shell | Bash |
 | Editors | Nano, Vim |
 | File Managers | Ranger, Nautilus |
 | Web Browsers | Firefox, Chromium, Opera |
