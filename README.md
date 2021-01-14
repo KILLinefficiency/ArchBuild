@@ -8,13 +8,13 @@ The user must have an active internet connection and the Arch Linux ISO ready. I
 
 * [Using the scripts](#using-the-scripts)
 
-- [Stage 1](#stage-1)
+&nbsp; - [Stage 1](#stage-1)
 
-- [Stage 2](#stage-2)
+&nbsp; - [Stage 2](#stage-2)
 
-- [Stage 3](#stage-3)
+&nbsp; - [Stage 3](#stage-3)
 
-- [Stage 4](#stage-4)
+&nbsp; - [Stage 4](#stage-4)
 
 * [Tools that I use](#tools-that-i-use)
 
@@ -186,7 +186,7 @@ Here's a table of all the tools that I use and come with this Arch Linux install
 | Wallpaper Setter | Feh |
 | Compositor | Picom |
 | Lock | i3lock |
-| Application Lanucher | Rofi |
+| Application Launcher | Rofi |
 | Bootloader | GRUB |
 | Terminal | Alacritty |
 | Shell | Bash |
