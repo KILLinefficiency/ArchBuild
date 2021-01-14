@@ -179,6 +179,8 @@ $ ./ArchBuild_4.sh
 
 Here's a table of all the tools that I use and come with this Arch Linux installation.
 
+| Category     | Tools |
+|------------- | ----------- |
 | Window Manager | XMonad |
 | Status Bar | Xmobar |
 | Wallpaper Setter | Feh |
