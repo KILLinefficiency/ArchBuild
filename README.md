@@ -6,6 +6,8 @@ The entire installation is divided into four Bash shell scripts.
 
 The user must have an active internet connection and the Arch Linux ISO ready. It is advised to set up Arch Linux using these scripts inside a Virtual Machine.
 
+[Using the scripts](#using-the-scripts)
+
 ## Using the scripts
 
 ### Stage 1
@@ -36,16 +38,6 @@ The script will start ``fdisk`` to partition the disk.
 
 My Arch setup uses 512 MB of disk for the Boot partition and the rest of the disk for Arch Linux.
 
- Partition 1: /dev/sda1 -> boot partition.
- Partition 2: /dev/sda2 -> root partition.
- /dev/sdX1 :
-   Size: 512 MB. Sector: 2048 to 1050632
-   Type: UEFI
-   Bootable: Yes
- /dev/sdX2
-   Size : Rest of the disk. Sector: Rest of the disk.
-   Type : Linux
-   Bootable: No
 
 **ArchBuid_1.sh** by default installs the system to disk ``sda``. If you dont want to install the system to ``sda``, change the following lines in the ``ArchBuild_1.sh`` script to fit your need:
 
@@ -54,6 +46,20 @@ DISK="sda"
 BOOT="sda1"
 ROOT="sda2"
 ```
+
+Partition 1: /dev/sdX1 -> boot partition.
+
+Partition 2: /dev/sdX2 -> root partition.
+
+/dev/sdX1 :
+  Size: 512 MB. Sector: 2048 to 1050632
+  Type: UEFI
+  Bootable: Yes
+
+/dev/sdX2
+  Size : Rest of the disk. Sector: Rest of the disk.
+  Type : Linux
+  Bootable: No
 
 Run the ``Arch_Build_1.sh`` script:
 
@@ -138,3 +144,23 @@ $ sudo ./ArchBuild_3.sh
 It also performs some operations that requires the root user's permission.
 
 ### Stage 4
+
+Stage 4 invloves the ``ArchBuild_4.sh`` script.
+
+This script copies all the configuration files I use on the newly installed system.
+
+**This script is not supposed to be run as the root user.**
+
+Therefore, it's recommended to boot into the installed system, login with your username and password. 
+
+Edit this line in the ``ArchBuild_4.sh`` script to set your own soundcard:
+
+```
+MYSOUNDCARD="Intel"
+```
+
+Run the ``ArchBuild_4.sh`` script:
+
+```
+$ ./ArchBuild_4.sh
+```
