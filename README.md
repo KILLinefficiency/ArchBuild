@@ -201,7 +201,7 @@ $ ./ArchBuild_4.sh
 Here's a table of all the tools that I use and come with this Arch Linux installation.
 
 | Category     | Tools |
-|------------- | ----------- |
+| ------------ | ----------- |
 | Window Manager | XMonad |
 | Status Bar | Xmobar |
 | Wallpaper Setter | Feh |
@@ -222,3 +222,40 @@ Here's a table of all the tools that I use and come with this Arch Linux install
 | Fonts | Hack, Font Awesome |
 
 ## My XMonad Keybindings
+
+Here's a table of my XMonad Keybindings.
+
+I use the Super Key (Windows Key / Mod4 Key) as the Mod Key.
+
+| Keybinding | Action |
+| ---------- | ------ |
+| Super + Enter | Spawns Terminal. |
+| Super + q | Closes a window. |
+| Super + p | Launchs Application Launcher. |
+| Super + s | Spawns File Manager. |
+| Super + f | Spawns Firefox. |
+| Super + b | Toggles Xmobar on or off. |
+| Super + i | Increases the volume. |
+| Super + u | Decreases the volume. |
+| Super + Shift + l | Locks the system. |
+| Super + Shift + b | Changes wallpaper. |
+| Super + {number} | Switches to that numbered workspace. |
+| Super + Shift + {number} | Sends the focused window to the numbered workspace. |
+| Super + Space | Changes the Layout. |
+| Super + Shift + Space | Resets the Layout. |
+| Super + Tab | Changes window focus. |
+| Super + j | Changes focus to the next window. |
+| Super + k | Changes focus to the previous window. |
+| Super + m | Focuses on the master window. |
+| Super + Shift + Enter | Swaps the focused window with the master window. |
+| Super + Shift + j | Swaps the focused window with the next window. |
+| Super + Shift + k | Swaps the focused window with the previous window. |
+| Super + h | Shrinks the master window area. |
+| Super + l | Exapnds the master window area. |
+| Super + , | Increases the number of windows in the master area. |
+| Super + . | Decreases the number of windoes in the master area. |
+| Super + Shift + q | Quits XMonad. |
+| Super + Control + q | Restarts XMonad. |
+| Control + Button1 | Floats a window. |
+| Control + Button3 | Resizes a floating window. |
+| Control + t | Resets the windows to tile mode. |
