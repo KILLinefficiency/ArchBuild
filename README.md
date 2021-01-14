@@ -26,8 +26,37 @@ git clone https://www.github.com/KILLinefficiency/ArchBuild.git
 cd ArchBuild
 ```
 
-Run the ``ArchBuild_1.sh`` script:
+The installation process begins with the ``ArchBuild_1.sh`` script.
+
+This script partitions the disk, writes file systems to the partitions, installs the system using ``pacstrap``, generates the ``fstab`` file and launches the user in the ``arch-chroot`` environment.
+
+The script will start ``fdisk`` to partition the disk.
+
+My Arch setup uses 512 MB of disk for the Boot partition and the rest of the disk for Arch Linux.
+
+ Partition 1: /dev/sda1 -> boot partition.
+ Partition 2: /dev/sda2 -> root partition.
+ /dev/sdX1 :
+   Size: 512 MB. Sector: 2048 to 1050632
+   Type: UEFI
+   Bootable: Yes
+ /dev/sdX2
+   Size : Rest of the disk. Sector: Rest of the disk.
+   Type : Linux
+   Bootable: No
+
+**ArchBuid_1.sh** by default installs the system to disk ``sda``. If you dont want to install the system to ``sda``, change the following lines in the ``ArchBuild_1.sh`` script to fit your need:
+
+```
+DISK="sda"
+BOOT="sda1"
+ROOT="sda2"
+```
+
+Run the ``Arch_Build_1.sh`` script:
 
 ```
 ./ArchBuild_1.sh
 ```
+
+The ``ArchBuild_1.sh`` script ends after putting you inside the ``arch-chroot`` environment of the newly installed system.
