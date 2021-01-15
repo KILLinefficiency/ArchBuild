@@ -2,7 +2,7 @@
 
 Here's the collection of my dotfiles. All of these configuration files get setup during the installation from the scripts.
 
-However individual files can be pulled from here.
+However, individual files can be pulled from here.
 
 | File | Type | Path |
 | ---- | ---- | ---- |
