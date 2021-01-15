@@ -2,11 +2,11 @@ Config {
 
    -- appearance
      font =         "xft:Font Awesome 5 Free Solid:style=solid:size=10, Font Awesome 5 Brands Regular:style=Regular, Hack:size=10:Bold:antialias=true"
-   , bgColor =      "black" 
+   , bgColor =      "#1e1f29" 
    , fgColor =      "white"
    , position =     Top
    , border =       BottomB
-   , borderColor =  "black"
+   , borderColor =  "#1e1f29"
 
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
