@@ -39,7 +39,7 @@ sudo pacman -S vlc rhythmbox --noconfirm
 sudo pacman -S ttf-hack ttf-font-awesome --noconfirm
 
 # Others:
-sudo pacman -S neofetch htop bashtop bat imagemagick man tree zip unzip wget screenkey gparted --noconfirm
+sudo pacman -S neofetch htop bashtop bat imagemagick man tree exa zip unzip wget screenkey gparted --noconfirm
 
 # Patching Drivers:
 sudo modprobe vboxdrv
