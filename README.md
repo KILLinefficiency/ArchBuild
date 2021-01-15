@@ -239,6 +239,7 @@ Here's a table of all the tools that I use and come with this Arch Linux install
 | Communication Tools | Discord |
 | Virtualization Tools | QEMU, Virtualbox |
 | Document Reader | Zathura |
+| Screenshot Tool | Scrot |
 | Torrent Client | Transmission |
 | Media Tools |  Rhythmbox, VLC Media Player |
 | Fonts | Hack, Font Awesome |
@@ -261,6 +262,8 @@ I use the Super Key (Windows Key / Mod4 Key) as the Mod Key.
 | Super + u | Decreases the volume. |
 | Super + Shift + l | Locks the system. |
 | Super + Shift + b | Changes wallpaper. |
+| Super + PrtScr | Takes a screenshot. |
+| Super + Shift + PrtScr | Takes a screenshot of the focused window. |
 | Super + {number} | Switches to that numbered workspace. |
 | Super + Shift + {number} | Sends the focused window to the numbered workspace. |
 | Super + Space | Changes the Layout. |
