@@ -29,6 +29,9 @@ sudo pacman -S zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps --no
 # Torrent Client:
 sudo pacman -S transmission-qt --noconfirm
 
+# Screenshot Tool:
+sudo pacman -S scrot --noconfirm
+
 # Media Tools:
 sudo pacman -S vlc rhythmbox --noconfirm
 
