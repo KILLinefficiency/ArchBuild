@@ -55,6 +55,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Close Current Window
     , ((modm,                 xK_q     ), kill)
 
+    , ((modm,                 xK_Print ), spawn "scrot -d 1")
+
+    , ((modm .|. shiftMask,   xK_Print ), spawn "scrot -d 1 -u")
+
     -- Change Layout
     , ((modm,                 xK_space ), sendMessage NextLayout)
 
