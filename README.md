@@ -77,19 +77,19 @@ MYSOUNDCARD="Intel"
 Fire your VM and boot into the Arch Linux Live ISO. Install Git:
 
 ```
-pacman -Sy git --noconfirm
+# pacman -Sy git --noconfirm
 ```
 
 After Git is done installing, clone this repository inside the Live environment:
 
 ```
-git clone https://www.github.com/KILLinefficiency/ArchBuild.git
+# git clone https://www.github.com/KILLinefficiency/ArchBuild.git
 ```
 
 ``cd`` into the cloned repository:
 
 ```
-cd ArchBuild
+# cd ArchBuild
 ```
 
 The installation process begins with the ``ArchBuild_1.sh`` script.
@@ -123,7 +123,7 @@ My Arch setup uses 512 MB of disk for the Boot partition and the rest of the dis
 Run the ``Arch_Build_1.sh`` script:
 
 ```
-./ArchBuild_1.sh
+# ./ArchBuild_1.sh
 ```
 
 The ``ArchBuild_1.sh`` script ends after putting you inside the ``arch-chroot`` environment of the newly installed system.
@@ -133,7 +133,7 @@ The ``ArchBuild_1.sh`` script ends after putting you inside the ``arch-chroot`` 
 After entering the ``arch-chroot`` environment, you'll find the cloned repository. ``cd`` into the repository:
 
 ```
-cd ArchBuild
+# cd ArchBuild
 ```
 
 Stage 2 involves running the second script, ``ArchBuild_2.sh``. 
@@ -143,7 +143,7 @@ This script sets things like, locales, hostname, services, users, passwords, xor
 Run the ``ArchBuild_2.sh`` script:
 
 ```
-./ArchBuild_2.sh
+# ./ArchBuild_2.sh
 ```
 
 After ``ArcBuild_2.sh`` is donw running, you can either stay in the ``arch-chroot`` environment or boot into the newly installed bare system.
@@ -153,19 +153,19 @@ After ``ArcBuild_2.sh`` is donw running, you can either stay in the ``arch-chroo
 Exit the ``arch-chroot`` environment:
 
 ```
-exit
+# exit
 ```
 
 Unmount the partitions:
 
 ```
-umount -R /mnt
+# umount -R /mnt
 ```
 
 Reboot:
 
 ```
-reboot
+# reboot
 ```
 
 Now boot into the installed system with your username and password.
