@@ -41,6 +41,9 @@ sudo pacman -S ttf-hack ttf-font-awesome --noconfirm
 # Others:
 sudo pacman -S neofetch htop bashtop bat imagemagick man tree exa zip unzip wget screenkey gparted --noconfirm
 
+# Fancy Tools:
+sudo pacman -S cowsay lolcat figlet cmatrix --noconfirm
+
 # Patching Drivers:
 sudo modprobe vboxdrv
 
