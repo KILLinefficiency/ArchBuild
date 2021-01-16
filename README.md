@@ -350,3 +350,7 @@ $ xmonad --recompile
 ```
 $ startx
 ```
+
+### Audio does not work inside a Virtual Machine.
+
+If audio does not work inside a Virtual Machine then, change the audio settings of your Virtual Machine and select your system card.
