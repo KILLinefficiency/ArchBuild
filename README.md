@@ -210,6 +210,17 @@ Run the ``ArchBuild_4.sh`` script:
 $ ./ArchBuild_4.sh
 ```
 
+### Summary
+
+Here's the summary of the installation in a table.
+
+| Script | Run Inside | Need root? / Use sudo? |
+| ------ | ---------- | ---------------------- |
+| ArchBuild_1.sh | Arch Linux Live Environment | Yes |
+| ArchBuild_2.sh | arch-chroot Environment | Yes |
+| ArchBuild_3.sh | TTY of the newly installed system | Yes |
+| ArchBuild_4.sh | TTY of the newly installed system | No |
+
 ## Launching the Graphical Environment
 
 Once that all the stages of installation are done, launch XMonad from a TTY using ``startx``:
