@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ~/.tools/todo_code
+python3 todo.py
