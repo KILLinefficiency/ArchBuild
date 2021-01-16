@@ -42,7 +42,7 @@ try:
 		if ask_del_num - 1 > len(todo_list):
 			err()
 		del todo[ask_del_num - 1]
-except KeyboardInterrupt:
+except (KeyboardInterrupt, ValueError):
 	print()
 	exit()
 
