@@ -8,7 +8,7 @@ fi
 pacman -Sy --noconfirm
 
 # Tools for the Window Manager:
-pacman -S alacritty feh picom xmonad xmoand-contrib xmobar rofi i3lock --noconfirm
+pacman -S alacritty feh picom xmonad xmonad-contrib xmobar rofi i3lock --noconfirm
 
 # Editors:
 pacman -S nano vim --noconfirm
