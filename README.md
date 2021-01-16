@@ -237,6 +237,13 @@ Once that all the stages of installation are done and you have rebooted your mac
 $ startx
 ```
 
+You can then remove the install scripts completely from your system:
+
+```
+$ sudo rm -rf /root/ArchBuild
+$ rm -rf ~/ArchBuild
+```
+
 ## Tools that I use
 
 Here's a table of all the tools that I use and come with this Arch Linux installation.
