@@ -35,5 +35,3 @@ pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot --noconfirm
 
 pacman -S alsa-utils pamixer asoundconf --noconfirm
 gpasswd -a ${MYUSERNAME} audio
-
-pacman -Rns xorg-fonts-75dpi xorg-fonts-100dpi
