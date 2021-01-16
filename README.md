@@ -212,6 +212,12 @@ Run the ``ArchBuild_4.sh`` script:
 $ ./ArchBuild_4.sh
 ```
 
+Reboot your machine once ``ArchBuild_4.sh`` script is done running:
+
+```
+reboot
+```
+
 ### Summary
 
 Here's the summary of the installation in a table.
@@ -225,7 +231,7 @@ Here's the summary of the installation in a table.
 
 ## Launching the Graphical Environment
 
-Once that all the stages of installation are done, launch XMonad from a TTY using ``startx``:
+Once that all the stages of installation are done and you have rebooted your machine, launch XMonad from a TTY using ``startx``:
 
 ```
 $ startx
