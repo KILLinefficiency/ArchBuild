@@ -1,57 +1,62 @@
 #!/bin/bash
 
-sudo pacman -Sy --noconfirm
+if [ $(whoami) != "root" ]; then
+	echo "Run this script using sudo."
+	exit
+fi
+
+pacman -Sy --noconfirm
 
 # Tools for the Window Manager:
-sudo pacman -S alacritty feh picom xmonad xmoand-contrib xmobar rofi i3lock --noconfirm
+pacman -S alacritty feh picom xmonad xmoand-contrib xmobar rofi i3lock --noconfirm
 
 # Editors:
-sudo pacman -S nano vim --noconfirm
+pacman -S nano vim --noconfirm
 
 # File Managers:
-sudo pacman -S ranger nautilus --noconfirm
+pacman -S ranger nautilus --noconfirm
 
 # Browsers:
-sudo pacman -S firefox chromium opera --noconfirm
+pacman -S firefox chromium opera --noconfirm
 
 # Communication Tools:
-sudo pacman -S discord --noconfirm
+pacman -S discord --noconfirm
 
 # Developer Tools:
-sudo pacman -S python3 python-pip gcc clang nasm --noconfirm
+pacman -S python3 python-pip gcc clang nasm --noconfirm
 
 # Virtualization Tools:
-sudo pacman -S qemu virtualbox virtualbox-host-modules-arch --noconfirm
+pacman -S qemu virtualbox virtualbox-host-modules-arch --noconfirm
 
 # Document Reader:
-sudo pacman -S zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps --noconfirm
+pacman -S zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps --noconfirm
 
 # Torrent Client:
-sudo pacman -S transmission-qt --noconfirm
+pacman -S transmission-qt --noconfirm
 
 # Screenshot Tool:
-sudo pacman -S scrot --noconfirm
+pacman -S scrot --noconfirm
 
 # Media Tools:
-sudo pacman -S vlc rhythmbox --noconfirm
+pacman -S vlc rhythmbox --noconfirm
 
 # Fonts:
-sudo pacman -S ttf-hack ttf-font-awesome --noconfirm
+pacman -S ttf-hack ttf-font-awesome --noconfirm
 
 # Others:
-sudo pacman -S neofetch htop bashtop bat imagemagick man tree exa zip unzip wget screenkey gparted --noconfirm
+pacman -S neofetch htop bashtop bat imagemagick man tree exa zip unzip wget screenkey gparted --noconfirm
 
 # Fancy Tools:
-sudo pacman -S cowsay lolcat figlet cmatrix --noconfirm
+pacman -S cowsay lolcat figlet cmatrix --noconfirm
 
 # Patching Drivers:
-sudo modprobe vboxdrv
+modprobe vboxdrv
 
 # Setting up the .bashrc file for the root user:
-sudo cp dotfiles/bashrc_root /root/.bashrc
+cp dotfiles/bashrc_root /root/.bashrc
 
 # Setting up dotfiles that need root user ownership:
-sudo cp dotfiles/picom.conf /etc/xdg/picom.conf
-sudo cp dotfiles/grub /etc/default/grub
-sudo cp dotfiles/grub_bg.png /root/grub_bg.png
-sudo grub-mkconfig -o /boot/grub/grub.cfg
+cp dotfiles/picom.conf /etc/xdg/picom.conf
+cp dotfiles/grub /etc/default/grub
+cp dotfiles/grub_bg.png /root/grub_bg.png
+grub-mkconfig -o /boot/grub/grub.cfg
