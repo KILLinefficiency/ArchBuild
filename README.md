@@ -112,7 +112,7 @@ My Arch setup uses 512 MB of disk for the Boot partition and the rest of the dis
 >
 > &nbsp;&nbsp; Size: 512 MB. Sector: 2048 to 1050632
 >
-> &nbsp;&nbsp; Type: UEFI
+> &nbsp;&nbsp; Type: EFI
 >
 > &nbsp;&nbsp; Bootable: Yes
 > 
@@ -392,3 +392,15 @@ $ startx
 ### Audio does not work inside a Virtual Machine.
 
 If audio does not work inside a Virtual Machine then, change the audio settings of your Virtual Machine and select your system card.
+
+After that, run:
+
+```
+$ asoundconf set-default-card "<your_card_name>"
+```
+
+In my case it's ``Intel``.
+
+```
+$ asoundconf set-default-card "Intel"
+```
