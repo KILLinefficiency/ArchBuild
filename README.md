@@ -34,6 +34,8 @@ The user must have an active internet connection and the Arch Linux ISO ready. I
 
 * [Tools that I use](#tools-that-i-use)
 
+* [Custom tools](#custom-tools)
+
 * [My XMonad Keybindings](#my-xmonad-keybindings)
 
 * [A little help](#a-little-help)
@@ -269,6 +271,42 @@ Here's a table of all the tools that I use and come with this Arch Linux install
 | Torrent Client | Transmission |
 | Media Tools |  Rhythmbox, VLC Media Player |
 | Fonts | Hack, Font Awesome |
+
+## Custom tools
+
+I made a few custom tools for myself.
+
+**Wallpaper Changer**
+
+The keybinding Super + Shift + b calls a script ``chbg.sh`` which changes the wallpaper. This script cycles through wallpapers present in ``!/.tools/bg``.
+
+You are free to add your own wallpapers. All the wapapers should be numbered accordingly and should have a ``.jpg`` extension.
+
+You con convert a wallpaper to ``jpg`` format using:
+
+```
+$ convert 100.png 100.jpg
+```
+
+**Lock**
+
+The keybinding Super + Shift + l locks the system. This keybinding calls a script ``lock.sh``.
+
+The background image for the lock is at ``~/.tools/lock_bg.png`` and can be changed. The lock background should have a ``.png`` extension.
+
+Convert an image to ``png`` format:
+
+```
+$ convert batman.jpg lock_bg.png
+```
+
+**Todo**
+
+Todo is a simple todo application. Launch it from anywhere using:
+
+```
+$ todo
+``
 
 ## My XMonad Keybindings
 
