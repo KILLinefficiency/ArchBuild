@@ -306,7 +306,7 @@ Todo is a simple todo application. Launch it from anywhere using:
 
 ```
 $ todo
-``
+```
 
 ## My XMonad Keybindings
 
