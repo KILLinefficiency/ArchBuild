@@ -208,6 +208,10 @@ This script copies all the configuration files I use on the newly installed syst
 
 Therefore, it's recommended to boot into the installed system, login with your username and password. 
 
+The ``ArchBuild_4.sh`` script should not be run as the root user. Do not use ``sudo``!
+
+The installation of ``yay`` uses ``sudo`` and the script might ask you for password a couple of times.
+
 Run the ``ArchBuild_4.sh`` script:
 
 ```
