@@ -266,7 +266,12 @@ Here's a table of all the tools that I use and come with this Arch Linux install
 | Terminal | Alacritty |
 | Shell | Bash |
 | Editors | Nano, Vim |
+| GTK Theme | Arc |
+| GTK Icon | Arc |
+| Scientific Tools | GNOME Calculator |
 | File Managers | Ranger, Nautilus |
+| Archive Utility | File Roller |
+| Games | GNU Chess, GNOME Chess, GNOME Sudoku, GNOME Nibbles |
 | Web Browsers | Firefox, Chromium, Opera |
 | Communication Tools | Discord |
 | Virtualization Tools | QEMU, Virtualbox |
