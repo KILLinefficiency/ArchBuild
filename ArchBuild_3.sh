@@ -28,11 +28,20 @@ pacman -S python3 python-pip gcc clang nasm --noconfirm
 # Virtualization Tools:
 pacman -S qemu virtualbox virtualbox-host-modules-arch --noconfirm
 
+# Achive Manager:
+pacman -S file-roller --noconfirm
+
+# Scientific Tools:
+pacman -S gnome-calculator --noconfirm
+
 # Document Reader:
 pacman -S zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps --noconfirm
 
+# Games:
+pacman -S gnuchess gnome-chess gnome-sudoku gnome-nibbles --noconfirm
+
 # Torrent Client:
-pacman -S transmission-qt --noconfirm
+pacman -S transmission-gtk --noconfirm
 
 # Screenshot Tool:
 pacman -S scrot --noconfirm
@@ -42,6 +51,9 @@ pacman -S vlc rhythmbox --noconfirm
 
 # Fonts:
 pacman -S ttf-hack ttf-font-awesome --noconfirm
+
+# Themes:
+pacman -S arc-gtk-theme arc-icon-theme --noconfirm
 
 # Others:
 pacman -S neofetch htop bashtop bat imagemagick man tree exa zip unzip wget screenkey gparted --noconfirm
