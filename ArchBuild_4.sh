@@ -26,6 +26,7 @@ cp dotfiles/rofi/config.rasi ~/.config/rofi/config.rasi
 cp dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 cp -r dotfiles/tools ~/.tools
+cp -r dotfiles/gtk-3.0 ~/.config/gtk-3.0
 
 cp dotfiles/xmobarrc ~/.xmobarrc
 cp dotfiles/xmonad.hs ~/.xmonad/xmonad.hs
