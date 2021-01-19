@@ -22,9 +22,9 @@ fdisk /dev/${DISK}
 mkfs.vfat -F32 /dev/${BOOT}
 mkfs.ext4 /dev/${ROOT}
 
+mount /dev/${ROOT} /mnt
 mkdir /mnt/boot
 mount /dev/${BOOT} /mnt/boot
-mount /dev/${ROOT} /mnt
 
 pacstrap /mnt base linux linux-firmware
 
