@@ -1,8 +1,23 @@
 #!/bin/sh
 
-DISK="sda"
-BOOT="sda1"
-ROOT="sda2"
+if [ $# -ne 3 ]; then
+  echo "Please provide the 3 required arguments."
+  echo "Usage: $0 <disk to install to> <boot partition> <root partition>"
+  echo "Example usage: $0 sda sda1 sda2"
+  exit
+fi
+
+echo "Are you sure you want to continue with the provided arguments? This will wipe all data on the given partitions."
+read -p "Press y to continue: " confirmation_input
+
+if [ "$confirmation_input" != 'y' ] && [ "$confirmation_input" != 'Y' ]; then
+	echo "Cancelling execution."
+	exit
+fi
+
+DISK=$1
+BOOT=$2
+ROOT=$3
 
 pacman -Sy git --noconfirm
 timedatectl set-ntp true
