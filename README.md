@@ -12,8 +12,6 @@ The user must have an active internet connection and the Arch Linux ISO ready. I
 
 * [Making the install scripts your own](#making-the-install-scripts-your-own)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - [Editing ArchBuild_1.sh](#editing-archbuild_1sh)
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - [Editing ArchBuild_2.sh](#editing-archbuild_2sh)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - [Editing ArchBuild_4.sh](#editing-archbuild_4sh)
@@ -41,20 +39,6 @@ The user must have an active internet connection and the Arch Linux ISO ready. I
 * [A little help](#a-little-help)
 
 ## Making the install scripts your own
-
-Some of the settings in the install scripts are very specific to what I use. Like, username, hostname, timezone, disk, etc.
-
-You can edit the scripts to change these things according to your needs. Here's how:
-
-### Editing ArchBuild_1.sh
-
-``ArchBuid_1.sh`` by default installs the system to disk ``sda``. If you dont want to install the system to ``sda``, change the following lines in the ``ArchBuild_1.sh`` script to fit your need:
-
-```
-DISK="sda"
-BOOT="sda1"
-ROOT="sda2"
-```
 
 ### Editing ArchBuild_2.sh
 
@@ -124,10 +108,18 @@ My Arch setup uses 512 MB of disk for the Boot partition and the rest of the dis
 >
 > &nbsp;&nbsp; Bootable: No
 
+The scripts requires the disk to install Arch Linux to, the boot partition and the root partition to be passed respectively as it's arguments.
+
 Run the ``Arch_Build_1.sh`` script:
 
 ```
-# ./ArchBuild_1.sh
+# ./ArchBuild_1.sh <disk to install to> <boot partition> <root partition>
+```
+
+Since I install Arch on the main disk of my system, for me it's ``sda``, ``sda1`` and ``sda2`` respectively. Like,
+
+```
+# ./ArchBuild_1.sh sda sda1 sda2
 ```
 
 The ``ArchBuild_1.sh`` script ends after putting you inside the ``arch-chroot`` environment of the newly installed system.
