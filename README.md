@@ -279,11 +279,11 @@ I made a few custom tools for myself.
 
 **Wallpaper Changer**
 
-The keybinding Super + Shift + b calls a script ``chbg.sh`` which changes the wallpaper. This script cycles through wallpapers present in ``!/.tools/bg``.
+The keybinding Super + Shift + b calls a script ``chbg.sh`` which changes the wallpaper. This script cycles through wallpapers present in ``~/.tools/bg``.
 
 You are free to add your own wallpapers. All the wapapers should be numbered accordingly and should have a ``.jpg`` extension.
 
-You con convert a wallpaper to ``jpg`` format using:
+You con convert a wallpaper to ``jpg`` format using ``convert`` like:
 
 ```
 $ convert 100.png 100.jpg
