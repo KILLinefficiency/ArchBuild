@@ -1,7 +1,6 @@
 syntax on
 
 set t_Co=256
-set bg=light
 set tabstop=4
 set encoding=utf-8
 
@@ -15,17 +14,23 @@ set showmatch
 set autoindent
 set noswapfile
 
-highlight Normal        ctermbg=234
+highlight LineNr        ctermfg=gray
+highlight Visual        ctermfg=white          ctermbg=black
+
+highlight Search        ctermfg=white          ctermbg=black
+highlight IncSearch     ctermfg=white          ctermbg=black
 
 highlight Number        ctermfg=yellow
 
 highlight Boolean       ctermfg=yellow         cterm=italic
 
-highlight Comment       ctermfg=gray           cterm=italic
+highlight Comment       ctermfg=gray           cterm=italic,underline
 
 highlight Function      ctermfg=cyan
 
 highlight PreProc       ctermfg=magenta        cterm=bold
+
+highlight Operator      ctermfg=magenta
 
 highlight String        ctermfg=green
 highlight Character     ctermfg=red            cterm=bold
@@ -34,8 +39,8 @@ highlight Type          ctermfg=blue           cterm=italic
 highlight Structure     ctermfg=blue           cterm=bold
 
 highlight Label         ctermfg=darkgreen      cterm=bold
-highlight Repeat        ctermfg=lightgreen     cterm=italic
-highlight Conditional   ctermfg=lightgreen     cterm=italic
+highlight Repeat        ctermfg=magenta        cterm=italic
+highlight Conditional   ctermfg=magenta        cterm=italic
 
 highlight Todo          ctermbg=yellow         cterm=bold
 highlight Error         ctermbg=red            cterm=bold
