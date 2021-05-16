@@ -35,7 +35,7 @@ cursor:
 
 colors:
   primary:
-    background: "#1e1f29"
+    background: "#282c34"
     foreground: "#abb2bf"
   
   normal:
