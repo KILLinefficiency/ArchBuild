@@ -11,7 +11,7 @@ pacman -Sy --noconfirm
 pacman -S alacritty feh picom xmonad xmonad-contrib xmobar rofi i3lock --noconfirm
 
 # Editors:
-pacman -S nano vim --noconfirm
+pacman -S nano neovim --noconfirm
 
 # File Managers:
 pacman -S ranger nautilus --noconfirm

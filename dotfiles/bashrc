@@ -7,6 +7,7 @@ RED="\e[31;1m"
 GREEN="\e[32;1m"
 YELLOW="\e[33;1m"
 
+alias vim="nvim"
 alias ls="ls --color"
 
 PS2="\[$GREEN\]  \[$DEFAULT\]"

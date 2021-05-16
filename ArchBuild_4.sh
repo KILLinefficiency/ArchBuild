@@ -15,12 +15,13 @@ makepkg -si
 cd $ADDRESS
 
 mkdir ~/.config/rofi
+mkdir ~/.config/nvim
 mkdir ~/.config/zathura
 mkdir ~/.config/alacritty
 
-cp dotfiles/vimrc ~/.vimrc
 cp dotfiles/bashrc ~/.bashrc
 cp dotfiles/xinitrc ~/.xinitrc
+cp dotfiles/init.vim ~/.config/nvim/init.vim
 cp dotfiles/zathurarc ~/.config/zathura/zathurarc
 cp dotfiles/rofi/config.rasi ~/.config/rofi/config.rasi
 cp dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
@@ -30,5 +31,9 @@ cp -r dotfiles/gtk-3.0 ~/.config/gtk-3.0
 
 cp dotfiles/xmobarrc ~/.xmobarrc
 cp dotfiles/xmonad.hs ~/.xmonad/xmonad.hs
+
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+nvim -c ":PlugInstall" -c ":UpdateRemotePlugins" -c ":qall"
 
 xmonad --recompile
