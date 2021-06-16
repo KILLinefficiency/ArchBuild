@@ -9,6 +9,7 @@ YELLOW="\e[33;1m"
 
 alias vim="nvim"
 alias ls="ls --color"
+alias update="sudo pacman -Syu --noconfirm && clear && figlet Upgrade Done ! | lolcat"
 
 PS2="\[$GREEN\]  \[$DEFAULT\]"
 
