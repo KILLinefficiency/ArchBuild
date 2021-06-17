@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 address="$HOME/.tools/bg"
@@ -32,3 +33,5 @@ echo "$next" > $current_bg_address
 echo "${wallpapers[$next]}" > $current_restore_address 
 
 feh --bg-scale "$address/${wallpapers[$next]}" 2> /dev/null
+
+xsetroot -cursor_name left_ptr
