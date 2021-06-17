@@ -34,6 +34,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot --noconfirm
 
 pacman -S alsa-utils pamixer asoundconf --noconfirm
+usermod -a -G audio ${MYUSERNAME}
 gpasswd -a ${MYUSERNAME} audio
 
 sudo -u ${MYUSERNAME} sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
