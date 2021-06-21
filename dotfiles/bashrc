@@ -10,6 +10,8 @@ YELLOW="\e[33;1m"
 alias vim="nvim"
 alias ls="ls --color"
 
+export PATH="$PATH:$HOME/.tools/"
+
 source /usr/share/nvm/init-nvm.sh 2> /dev/null
 
 PS2="\[$GREEN\]  \[$DEFAULT\]"
