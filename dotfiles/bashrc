@@ -1,0 +1,15 @@
+[[ $- != *i* ]] && return
+
+alias vim="nvim"
+alias scim="sc-im"
+alias py="ipython"
+alias sql="sqlite3"
+alias open="xdg-open"
+alias octave="octave -q"
+alias grep="grep --color"
+alias ls="ls --color=auto"
+
+source /usr/share/nvm/init-nvm.sh 2> /dev/null
+
+PS2="\[\e[01;35m\]~> \[\e[00;39m\]"
+PS1="\n\[\e[01;39m\]\u\[\e[01;31m\] :: \[\e[01;34m\]\w\n\[\e[01;32m\]~>\[\e[00;39m\] "

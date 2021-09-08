@@ -1,0 +1,175 @@
+# Set the Mod Key to the Super Key (Windows Key).
+set $mod Mod4
+
+# Set the font to Jetbrains Mono.
+font pango:Jetbrains Mono 8
+
+# Add outer and inner gaps of 5 px and 15 px respectively.
+gaps outer 5
+gaps inner 15
+
+# Start nm-applet at startup.
+exec --no-startup-id nm-applet
+
+# Set the keyboard volume keys.
+# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+# bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Set the key to drag around floating windows.
+floating_modifier $mod
+
+# Spwan an Alacritty instance.
+bindsym $mod+Return exec --no-startup-id alacritty
+
+# Kill the focused window.
+bindsym $mod+q kill
+
+# Open Rofi, an application launcher
+bindsym $mod+p exec --no-startup-id rofi -show drun -display-drun "Run" -show-icon -icon-theme Papirus
+
+# Use arrow keys to change the focus of the windows.
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Use the arrow keys to move the foused window around in the same Workspace.
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Spawn windows vertically.
+bindsym $mod+h split v
+
+# Spawn windows horizontally.
+bindsym $mod+v split h
+
+# Set the focused window to fullscreen.
+bindsym $mod+Shift+f fullscreen toggle
+
+# Set the window layout to stacking mode.
+bindsym $mod+s layout stacking
+
+# Set the window layout to tabbed mode.
+bindsym $mod+t layout tabbed
+
+# Set the window layout to split mode.
+bindsym $mod+e layout toggle split
+
+# Toggle between floating and tiling mode.
+bindsym $mod+Shift+space floating toggle
+
+# Change the focus between floating and tiling windows.
+bindsym $mod+space focus mode_toggle
+
+# Focus on the parent container.
+bindsym $mod+a focus parent
+
+# Focus on the child container.
+bindsym $mod+d focus child
+
+# Set Workspaces 1 to 10.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# Switch to Workspace.
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# Move a focused window to another workspace.
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# Reload the i3 configuration file.
+bindsym $mod+Shift+c reload
+
+# Restart i3.
+bindsym $mod+Shift+r restart
+
+# Exit i3.
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec --no-startup-id "i3-msg exit"
+
+# Resize mode for resizing windows.
+mode "resize" {
+        # Set keys for resizing windows.
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # Get back to default mode.
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+# Enter resize mode.
+bindsym $mod+r mode "resize"
+
+# Set no borders.
+default_border none
+
+client.focused   #282c34 #282c34 #abb2bf #282c34
+client.unfocused #abb2bf #abb2bf #282c34 #abb2bf
+
+# Set a random wallpaper from ~/Pictures/Wallpapers/ at startup. 
+exec_always --no-startup-id feh --bg-scale --randomize ~/Pictures/Wallpapers/*
+
+# Start Polybar at startup
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# Prevent screen from going black when inactive.
+exec_always --no-startup-id xset -dpms
+exec_always --no-startup-id xset s off
+
+# Get screenshot of the whole screen.
+bindsym Print exec --no-startup-id scrot -q 100 "$HOME/Pictures/Screenshots/%H:%M-%d-%m-%Y.jpg"
+
+# Get screenshot of the selected area.
+bindsym --release $mod+Print exec --no-startup-id scrot -s -q 100 "$HOME/Pictures/Screenshots/%H:%M-%d-%m-%Y.jpg"
+
+# Change wallpaper to a random wallpaper.
+bindsym $mod+Shift+b exec --no-startup-id feh --bg-scale --randomize ~/Pictures/Wallpapers/*
+
+# Cache a randome wallpaper for betterlockscreen.
+exec_always --no-startup-id betterlockscreen -u ~/Pictures/Wallpapers
+
+# Lock the system.
+bindsym $mod+l exec --no-startup-id betterlockscreen -l blur
+
+# Spawn a Firefox instance.
+bindsym $mod+w exec --no-startup-id firefox
+
+# Spawn Ranger
+bindsym $mod+f exec --no-startup-id nautilus
+
+# Toggle Screenkey
+bindsym $mod+Shift+s exec --no-startup-id ~/.config/toggle_screenkey.sh

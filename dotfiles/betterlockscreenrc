@@ -1,0 +1,17 @@
+insidecolor=00000000
+ringcolor=abb2bf
+keyhlcolor=d23c3dff
+bshlcolor=d23c3dff
+separatorcolor=ff0000
+insidevercolor=d19a66
+insidewrongcolor=e06c75
+ringvercolor=d19a66
+ringwrongcolor=e06c75
+verifcolor=ffffffff
+timecolor=c678dd
+datecolor=abb2bf
+loginbox=00000066
+font="Jetbrains Mono"
+locktext=""
+lock_timeout=5
+time_format='%H:%M:%S'

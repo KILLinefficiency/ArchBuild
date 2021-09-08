@@ -1,0 +1,4 @@
+.mode box
+.headers on
+.nullvalue NULL
+.prompt "SQL > "
