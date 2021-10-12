@@ -57,6 +57,12 @@ source /usr/share/nvm/init-nvm.sh
 puts "Installing latest LTS version of NodeJS and npm."
 nvm install --lts
 
+puts "Installing pip packages."
+pip3 install flask pygame
+
+puts "Installing npm packages."
+npm install -g @vue/cli
+
 sudo rm -rf /ArchBuild/
 
 puts "Done! You can now reboot and log into your new system."

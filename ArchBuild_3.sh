@@ -12,9 +12,6 @@ pacman -Sy --noconfirm
 puts "Installing tools for the Window Manager."
 pacman -S alacritty i3-gaps feh network-manager-applet rofi dunst --noconfirm
 
-puts "Installing Editors."
-pacman -S nano neovim --noconfirm
-
 puts "Installing File Managers."
 pacman -S ranger nautilus ntfs-3g --noconfirm
 
@@ -25,7 +22,7 @@ puts "Installing Communication Tools."
 pacman -S discord --noconfirm
 
 puts "Installing Developer Tools."
-pacman -S go gcc lua ghc nasm clang clisp sqlite swi-prolog python3 ipython valgrind python-pip jupyterlab sqlitebrowser --noconfirm
+pacman -S go gcc lua ghc nasm clang clisp sqlite ghidra python3 ipython valgrind swi-prolog python-pip jupyterlab sqlitebrowser --noconfirm
 
 puts "Installing Virtualization Tools."
 pacman -S qemu docker gnome-boxes --noconfirm
@@ -55,7 +52,7 @@ puts "Installing Icons and Themes."
 pacman -S arc-gtk-theme arc-icon-theme papirus-icon-theme --noconfirm
 
 puts "Installing Other Packages and Dependencies."
-pacman -S jq bat man exa zip tree curl wget htop w3m xclip unzip rsync man-db bashtop usbutils neofetch xdg-utils screenkey youtube-dl imagemagick --noconfirm
+pacman -S jq bat man exa zip tldr tree curl wget htop w3m xclip unzip rsync man-db bashtop usbutils neofetch xdg-utils screenkey youtube-dl imagemagick --noconfirm
 
 puts "Installing Fancy Tools."
 pacman -S cowsay lolcat figlet cmatrix --noconfirm

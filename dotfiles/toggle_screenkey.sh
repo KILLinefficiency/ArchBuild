@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ -z $(ps -A | grep screenkey) ]; then
+if [ -z $(pgrep screenkey) ]; then
 	screenkey
 else
 	killall screenkey

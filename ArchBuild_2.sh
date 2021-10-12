@@ -55,6 +55,11 @@ pacman -S alsa-utils pamixer asoundconf pulseaudio --noconfirm
 usermod -a -G audio ${MYUSERNAME}
 gpasswd -a ${MYUSERNAME} audio
 
+puts "Installing Editors."
+pacman -S nano neovim --noconfirm
+ln -sf $(which nvim) /bin/vi
+ln -sf $(which nvim) /bin/vim
+
 puts "Installing Packer for NeoVim."
 sudo -u ${MYUSERNAME} git clone https://github.com/wbthomason/packer.nvim /home/${MYUSERNAME}/.local/share/nvim/site/pack/packer/start/packer.nvim
 

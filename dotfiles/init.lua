@@ -1,60 +1,83 @@
 vim.cmd 'packadd packer.nvim'
 
+local g = vim.g
+local o = vim.opt
+local remap = vim.api.nvim_set_keymap
+
 require('packer').startup(function()
 	use { 'wbthomason/packer.nvim' }
-	use { 'monsonjeremy/onedark.nvim' }
-	use { 'hoob3rt/lualine.nvim' }
---	use { 'mhinz/vim-startify' }
-	use { 'sheerun/vim-polyglot' }
 	use { 'lilydjwg/colorizer' }
-	use { 'francoiscabrol/ranger.vim' }
-	use { 'glepnir/dashboard-nvim' }
+	use { 'romgrk/barbar.nvim' }
+	use { 'sheerun/vim-polyglot' }
+	use { 'navarasu/onedark.nvim' }
 	use {
 		'nvim-telescope/telescope.nvim',
 		requires = { { 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' } }
 	}
 end)
 
-require('lualine').setup {
-	options = { theme = 'onedark' },
-	sections = {
-		lualine_a = { 'mode' },
-		lualine_b = { 'branch' },
-		lualine_c = { 'filename' },
-		lualine_x = { 'filetype' },
-		lualine_y = {},
-		lualine_z = { 'location' }
-	}
+g.mapleader = ' '
+
+o.tabstop = 4
+o.shiftwidth = 4
+o.encoding = 'UTF-8'
+o.clipboard = 'unnamedplus'
+
+o.mouse = 'a'
+o.title = true
+o.wrap = false
+o.number = true
+o.hlsearch = true
+o.incsearch = true
+o.showmode = false
+o.showmatch = true
+o.swapfile = false
+o.expandtab = true
+o.autoindent = true
+o.smartindent = true
+
+remap('', '<leader>q', ':bd<CR>', { noremap = true })
+remap('', '<leader><Up>', ':tabnew<CR>', { noremap = true })
+remap('', '<leader><Left>', ':tabprev<CR>', { noremap = true })
+remap('', '<leader><Right>', ':tabnext<CR>', { noremap = true })
+
+remap('', '<leader>o', ':Telescope oldfiles<CR>', { noremap = true })
+remap('', '<leader>t', ':Telescope find_files<CR>', { noremap = true })
+remap('', '<leader>f', ':Telescope file_browser<CR>', { noremap = true })
+remap('', '<leader>s', ':Telescope current_buffer_fuzzy_find<CR>', { noremap = true })
+
+local actions = require('telescope.actions')
+require('telescope').setup({
+	defaults = {
+		mappings = {
+			i = {
+				['<esc>'] = actions.close
+			}
+		}
+	}	
+})
+
+g.modes = {
+	n = 'Normal',
+	i = 'Insert',
+	v = 'Visual',
+	V = 'V-Line',
+	R = 'Replace',
+	c = 'Command',
+	Rv = 'V-Replace',
+	['<C-V>'] = 'V-Block',
+} 
+
+g.bufferline = {
+	icons = false,
+	autohide = true,
+	closable = true,
+	clickable = true,
+	animation = false,
+	icon_close_tab = 'x',
+	no_name_title = 'New File',
 }
 
-vim.g.mapleader = ' '
+o.statusline = '%#ErrorMsg# [%{toupper(g:modes[mode()])}] %M %f %= %#debugPC#%r %c:%l/%L %p%% %y '
 
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-
-vim.opt.title = true
-vim.opt.wrap = false
-vim.opt.number = true
-vim.opt.hlsearch = true
-vim.opt.incsearch = true
-vim.opt.showmatch = true
-vim.opt.swapfile = false
-vim.opt.autoindent = true
-vim.opt.paste = true
-
-vim.api.nvim_set_keymap('', '<leader>r', ':Ranger<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<leader>t', ':Telescope find_files<CR>', { noremap = true })
-
-vim.g.dashboard_default_executive = 'telescope'
-vim.g.dashboard_custom_header = {
-
-	' ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ',
-	' ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ',
-	' ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ',
-	' ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ',
-	' ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ',
-	' ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ',
-
-}
-
-vim.cmd 'colorscheme onedark'
+require('onedark').setup()
