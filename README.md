@@ -30,9 +30,7 @@ The user must have an active internet connection and the Arch Linux ISO ready. I
 
 * [Custom tools](#custom-tools)
 
-* [My XMonad Keybindings](#my-xmonad-keybindings)
-
-* [A little help](#a-little-help)
+* [My i3 Window Manager Keybindings](#my-i3-window-manager-keybindings)
 
 ## Making the install scripts your own
 
@@ -251,9 +249,9 @@ Here's a table of all the tools that I use and come with this Arch Linux install
 | Media Tools |  Rhythmbox, VLC Media Player |
 | Fonts | Font Awesome, Jetbrains Mono |
 
-## My XMonad Keybindings
+## My i3 Window Manager Keybindings
 
-Here's a table of my XMonad Keybindings.
+Here's a table of my i3 Window Manager Keybindings.
 
 I use the Super Key (Windows Key / Mod4 Key) as the Mod Key.
 
@@ -262,88 +260,25 @@ I use the Super Key (Windows Key / Mod4 Key) as the Mod Key.
 | Super + Enter | Spawns Terminal. |
 | Super + q | Closes a window. |
 | Super + p | Launchs Application Launcher. |
-| Super + s | Spawns File Manager. |
-| Super + f | Spawns Firefox. |
-| Super + b | Toggles Xmobar on or off. |
-| Super + i | Increases the volume. |
-| Super + u | Decreases the volume. |
-| Super + Shift + l | Locks the system. |
+| Super + f | Spawns File Manager. |
+| Super + w | Spawns Firefox. |
+| Super + l | Locks the system. |
+| Super + r | Enter resize mode. |
+| Super + {Arrow Keys} (Resize Mode)| Resize focused window when in resize mode. |
 | Super + Shift + b | Changes wallpaper. |
 | Super + PrtScr | Takes a screenshot. |
 | Super + Shift + PrtScr | Takes a screenshot of the focused window. |
 | Super + {number} | Switches to that numbered workspace. |
 | Super + Shift + {number} | Sends the focused window to the numbered workspace. |
-| Super + Space | Changes the Layout. |
-| Super + Shift + Space | Resets the Layout. |
-| Super + Tab | Changes window focus. |
-| Super + j | Changes focus to the next window. |
-| Super + k | Changes focus to the previous window. |
-| Super + m | Focuses on the master window. |
-| Super + Shift + Enter | Swaps the focused window with the master window. |
-| Super + Shift + j | Swaps the focused window with the next window. |
-| Super + Shift + k | Swaps the focused window with the previous window. |
-| Super + h | Shrinks the master window area. |
-| Super + l | Exapnds the master window area. |
-| Super + , | Increases the number of windows in the master area. |
-| Super + . | Decreases the number of windoes in the master area. |
-| Super + Shift + q | Quits XMonad. |
-| Super + Control + q | Restarts XMonad. |
-| Control + Button1 | Floats a window. |
-| Control + Button3 | Resizes a floating window. |
-| Control + t | Resets the windows to tile mode. |
-
-## A little help
-
-Here are the problems that I have encountered while setting my Arch Linux up.
-
-The solutions are also provided in case you encounter similar problems too.
-
-### Picom (Compositor) does not work in a Virtual Machine.
-
-The compositor, Picom does not function properly inside a Virtual Machine. Solution to that problem:
-
-1. Open the file ``/etc/xdg/picom.conf`` in an editor:
-
-```
-$ sudo vim /etc/xdg/picom.conf
-```
-
-2. Comment the following line using ``#``:
-
-```
-vsync = true
-```
-
-3. Save and exit.
-
-### XMonad does not start after a full system upgrade.
-
-1. Enter a TTY.
-
-2. Recompile XMonad using:
-
-```
-$ xmonad --recompile
-```
-
-3. Start the graphical environment:
-
-```
-$ startx
-```
-
-### Audio does not work inside a Virtual Machine.
-
-If audio does not work inside a Virtual Machine then, change the audio settings of your Virtual Machine and select your system card.
-
-After that, run:
-
-```
-$ asoundconf set-default-card "<your_card_name>"
-```
-
-In my case it's ``Intel``.
-
-```
-$ asoundconf set-default-card "Intel"
-```
+| Super + Shift + Space | Toggles Floating Mode. |
+| Super + h | Spawn tiling windows horizontally. |
+| Super + v | Spawns tiling windows vertically. |
+| Super + t | Switches to Tabbed Mode. |
+| Super + s | Switches to Stacking Mode. |
+| Super + e | Switches to Tiling Mode. |
+| Super + a | Focuses on the parent window. |
+| Super + d | Focuses on the chile window. |
+| Super + {Arrow Keys} | Changes focus to the next window. |
+| Super + Shift + e | Quits i3 Window Manager. |
+| Super + Shift + c | Reloads the ~/.config/i3/config file. |
+| Super + Shift + r | Restarts i3 Window Manager. |
