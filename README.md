@@ -66,31 +66,29 @@ The script will start ``fdisk`` to partition the disk.
 
 My Arch setup uses 512 MB of disk for the Boot partition and the rest of the disk for Arch Linux.
 
-```
-Partition 1: /dev/sdX1 -> boot partition.
-
-Partition 2: /dev/sdX2 -> root partition.
-
-/dev/sdX1 :
-
-&nbsp;&nbsp; Size: 512 MB. Sector: 2048 to 1050632
-
-&nbsp;&nbsp; Type: EFI
-
-&nbsp;&nbsp; Bootable: Yes
- 
-/dev/sdX2
-
-&nbsp;&nbsp; Size : Rest of the disk. Sector: Rest of the disk.
-
-&nbsp;&nbsp; Type : Linux
-
-&nbsp;&nbsp; Bootable: No
+>Partition 1: /dev/sdX1 -> boot partition.
+>
+>Partition 2: /dev/sdX2 -> root partition.
+>
+>/dev/sdX1 :
+>
+>&nbsp;&nbsp; Size: 512 MB. Sector: 2048 to 1050632
+>
+>&nbsp;&nbsp; Type: EFI
+>
+>&nbsp;&nbsp; Bootable: Yes
+>
+>/dev/sdX2
+>
+>&nbsp;&nbsp; Size : Rest of the disk. Sector: Rest of the disk.
+>
+>&nbsp;&nbsp; Type : Linux
+>
+>&nbsp;&nbsp; Bootable: No
 
 The scripts requires the disk to install Arch Linux to, the boot partition and the root partition to be passed respectively as it's arguments.
 
 Run the ``Arch_Build_1.sh`` script:
-```
 
 ```
 # ./ArchBuild_1.sh <disk to install to> <boot partition> <root partition>
