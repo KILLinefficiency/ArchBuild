@@ -66,29 +66,31 @@ The script will start ``fdisk`` to partition the disk.
 
 My Arch setup uses 512 MB of disk for the Boot partition and the rest of the disk for Arch Linux.
 
-> Partition 1: /dev/sdX1 -> boot partition.
->
-> Partition 2: /dev/sdX2 -> root partition.
->
-> /dev/sdX1 :
->
-> &nbsp;&nbsp; Size: 512 MB. Sector: 2048 to 1050632
->
-> &nbsp;&nbsp; Type: EFI
->
-> &nbsp;&nbsp; Bootable: Yes
-> 
-> /dev/sdX2
->
-> &nbsp;&nbsp; Size : Rest of the disk. Sector: Rest of the disk.
->
-> &nbsp;&nbsp; Type : Linux
->
-> &nbsp;&nbsp; Bootable: No
+```
+Partition 1: /dev/sdX1 -> boot partition.
+
+Partition 2: /dev/sdX2 -> root partition.
+
+/dev/sdX1 :
+
+&nbsp;&nbsp; Size: 512 MB. Sector: 2048 to 1050632
+
+&nbsp;&nbsp; Type: EFI
+
+&nbsp;&nbsp; Bootable: Yes
+ 
+/dev/sdX2
+
+&nbsp;&nbsp; Size : Rest of the disk. Sector: Rest of the disk.
+
+&nbsp;&nbsp; Type : Linux
+
+&nbsp;&nbsp; Bootable: No
 
 The scripts requires the disk to install Arch Linux to, the boot partition and the root partition to be passed respectively as it's arguments.
 
 Run the ``Arch_Build_1.sh`` script:
+```
 
 ```
 # ./ArchBuild_1.sh <disk to install to> <boot partition> <root partition>
@@ -205,22 +207,7 @@ Here's the summary of the installation in a table.
 | ArchBuild_3.sh | TTY of the newly installed system | Yes |
 | ArchBuild_4.sh | TTY of the newly installed system | No |
 
-## Launching the Graphical Environment
-
-Once that all the stages of installation are done and you have rebooted your machine, launch XMonad from a TTY using ``startx``:
-
-```
-$ startx
-```
-
-You can then remove the install scripts completely from your system:
-
-```
-$ sudo rm -rf /root/ArchBuild
-$ rm -rf ~/ArchBuild
-```
-
-## Tools that I use
+### Tools that I use
 
 Here's a table of all the tools that I use and come with this Arch Linux installation.
 
@@ -234,11 +221,11 @@ Here's a table of all the tools that I use and come with this Arch Linux install
 | Bootloader | GRUB |
 | Terminal | Alacritty |
 | Shell | Bash |
-| Editors | Nano, NeoVim |
+| Editors | NeoVim |
 | GTK Theme | Arc |
 | GTK Icon | Arc |
 | Scientific Tools | Octave, SC-IM |
-| File Managers | Ranger, Nautilus |
+| File Managers | Nautilus |
 | Archive Utility | File Roller |
 | Web Browsers | Firefox, Chromium, Opera |
 | Communication Tools | Discord |
@@ -246,7 +233,7 @@ Here's a table of all the tools that I use and come with this Arch Linux install
 | Document Reader | Evince |
 | Screenshot Tool | Scrot |
 | Torrent Client | Transmission |
-| Media Tools |  Rhythmbox, VLC Media Player |
+| Media Tools | Rhythmbox, VLC Media Player |
 | Fonts | Font Awesome, Jetbrains Mono |
 
 ## My i3 Window Manager Keybindings
