@@ -8,6 +8,7 @@ require('packer').startup(function()
 	use { 'wbthomason/packer.nvim' }
 	use { 'lilydjwg/colorizer' }
 	use { 'romgrk/barbar.nvim' }
+	use { 'hoob3rt/lualine.nvim' }
 	use { 'sheerun/vim-polyglot' }
 	use { 'navarasu/onedark.nvim' }
 	use {
@@ -78,6 +79,11 @@ g.bufferline = {
 	no_name_title = 'New File',
 }
 
-o.statusline = '%#ErrorMsg# [%{toupper(g:modes[mode()])}] %M %f %= %#debugPC#%r %c:%l/%L %p%% %y '
+require('lualine').setup({
+	options = {
+		theme = 'onedark',
+		icons_enabled = false,
+	}
+})
 
 require('onedark').setup()

@@ -58,7 +58,7 @@ The installation process begins with the ``ArchBuild_1.sh`` script.
 
 This script partitions the disk, writes file systems to the partitions, installs the system using ``pacstrap``, generates the ``fstab`` file and launches the user in the ``arch-chroot`` environment.
 
-The script will start ``fdisk`` to partition the disk.
+The script will start ``fdisk`` by default to partition the disk.
 
 My Arch setup uses 512 MB of disk for the Boot partition and the rest of the disk for Arch Linux.
 
@@ -82,18 +82,10 @@ My Arch setup uses 512 MB of disk for the Boot partition and the rest of the dis
 >
 >&nbsp;&nbsp; Bootable: No
 
-The scripts requires the disk to install Arch Linux to, the boot partition and the root partition to be passed respectively as it's arguments.
-
 Run the ``Arch_Build_1.sh`` script:
 
 ```
-# ./ArchBuild_1.sh <disk to install to> <boot partition> <root partition>
-```
-
-Since I install Arch on the main disk of my system, for me it's ``sda``, ``sda1`` and ``sda2`` respectively. Like,
-
-```
-# ./ArchBuild_1.sh sda sda1 sda2
+# ./ArchBuild_1.sh
 ```
 
 The ``ArchBuild_1.sh`` script ends after putting you inside the ``arch-chroot`` environment of the newly installed system.
@@ -142,12 +134,6 @@ Now boot into the installed system with your username and password.
 
 ## Stage 3
 
-Clone the repository again:
-
-```
-$ git clone https://www.github.com/KILLinefficiency/ArchBuild.sh
-```
-
 ``cd`` into the cloned repository:
 
 ```
@@ -168,7 +154,7 @@ It also performs some operations that requires the root user's permission.
 
 Stage 4 invloves the ``ArchBuild_4.sh`` script.
 
-This script copies all the configuration files I use on the newly installed system.
+This script copies all the configuration files I use to the newly installed system.
 
 **This script is not supposed to be run as the root user.**
 
@@ -176,7 +162,7 @@ Therefore, it's recommended to boot into the installed system, login with your u
 
 The ``ArchBuild_4.sh`` script should not be run as the root user. Do not use ``sudo``!
 
-The installation of ``yay`` uses ``sudo`` and the script might ask you for password a couple of times.
+The installation of ``yay`` uses ``sudo`` and the script might ask you for password and confirmation a couple of times.
 
 Run the ``ArchBuild_4.sh`` script:
 
@@ -187,7 +173,7 @@ $ ./ArchBuild_4.sh
 Reboot your machine once ``ArchBuild_4.sh`` script is done running:
 
 ```
-reboot
+$ reboot
 ```
 
 ### Summary

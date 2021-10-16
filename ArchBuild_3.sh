@@ -63,9 +63,6 @@ usermod -aG docker ${MYUSERNAME}
 systemctl enable docker
 systemctl enable containerd
 
-puts "Setting up dotfiles that need root user ownership."
-cp dotfiles/bashrc_root /root/.bashrc
-
 puts "Enabling Pacman and YAY colors."
 echo "[options]" >> /etc/pacman.conf
 echo "Color" >> /etc/pacman.conf
