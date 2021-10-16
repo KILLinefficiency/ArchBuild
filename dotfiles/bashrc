@@ -2,8 +2,8 @@
 
 alias scim="sc-im"
 alias py="python3"
-alias ipy="ipython"
 alias sql="sqlite3"
+alias ipy="ipython3"
 alias open="xdg-open"
 alias octave="octave -q"
 alias grep="grep --color"

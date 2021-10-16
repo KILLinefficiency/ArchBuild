@@ -2,12 +2,11 @@
 
 source ./config.sh
 
-puts "Installing NTP, Git, Grub, Base Development Tools, Network Tools, Network Services, Bluetooth Tools and Arch Install Scripts."
-pacman -Sy ntp git gitui dhcpcd networkmanager grub efibootmgr base-devel net-tools openssh bluez bluez-utils bluez-tools arch-install-scripts --noconfirm
+puts "Installing NTP, Git, Grub, Base Development Tools, Network Tools, Network Services and Arch Install Scripts."
+pacman -Sy ntp git dhcpcd networkmanager grub efibootmgr base-devel net-tools openssh arch-install-scripts --noconfirm
 
-puts "Enabling dhcpcd, bluetooth and NetworkManager Services."
+puts "Enabling dhcpcd and NetworkManager Services."
 systemctl enable dhcpcd
-systemctl enable bluetooth
 systemctl enable NetworkManager
 
 puts "Setting localtime."

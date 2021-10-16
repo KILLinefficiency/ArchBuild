@@ -24,11 +24,7 @@ The user must have an active internet connection and the Arch Linux ISO ready. I
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - [Summary](#summary)
 
-* [Launching the Graphical Environment](#launching-the-graphical-environment)
-
 * [Tools that I use](#tools-that-i-use)
-
-* [Custom tools](#custom-tools)
 
 * [My i3 Window Manager Keybindings](#my-i3-window-manager-keybindings)
 
