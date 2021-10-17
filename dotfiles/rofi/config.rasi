@@ -1,30 +1,88 @@
 configuration {
-	modi: "window,run,ssh,drun";
+	modi: [window, run, ssh, drun];
 	font: "Jetbrains Mono 13";
 	icon-theme: "Papirus";
 	show-icons: true;
+	display-drun: "Run";
+	hide-scrollbar: true;
+	sidebar-mode: false;
 }
 
 * {
-	background-color: #282c34;
-	text-color: #abb2bf;
-	border: 0.5% 0.25% 0.5% 0.25%;
-	border-color: #282c34;
+	bg: #282c34;
+	fg: #abb2bf;
+	sel: #98c379;
 	location: center;
+	border: 0.5% 0.25% 0.5% 0.25%;
+	border-color: @bg;
+}
+
+window {
+	background-color: @bg;
+	border-color: @fg;
+	border: 2px;
+	text-color: @fg;
 }
 
 prompt {
 	enabled: true;
 	padding: 0% 0.5% 0% 0%;
 	font: "Jetbrains Mono";
-	text-color: #abb2bf;
-	background-color: #282c34;
+	text-color: @fg;
+	background-color: @bg;
+}
+
+entry {
+	background-color: @bg;
+	text-color: @fg;
+	placeholder: "";
+}
+
+mainbox {
+	border: 0;
+	padding: 0;
+}
+
+textbox {
+	text-color: @fg;
+}
+
+inputbar {
+	background-text: @bg;
+	text-color: @fg;
+	border-color: @bg;
+}
+
+element {
+	background-color: @bg;
+	padding: 5px;
 }
 
 element-icon {
 	size: 25px;
+	background-color: @bg;
 }
 
-element selected {
-	text-color: #98c379;
+element-text {
+	text-color: @fg;
+	background-color: @bg;
+}
+
+element.normal.normal, element.alternate.normal {
+	text-color: @bg;
+	background-color: @bg;
+}
+
+element.selected.normal, element.selected.active {
+	text-color: @sel;
+	background-color: @sel;
+}
+
+listview {
+	scrollbar: false;
+	border-color: @bg;
+}
+
+textbox-prompt-colon {
+	str: "";
 }

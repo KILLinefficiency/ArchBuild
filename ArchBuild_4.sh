@@ -42,15 +42,12 @@ cp dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
 cp dotfiles/betterlockscreenrc ~/.config/betterlockscreenrc
 cp dotfiles/toggle_screenkey.sh ~/.config/toggle_screenkey.sh
 
-echo -e "\n# Set time automatically from the internet." >> ~/.config/i3/config
-echo -e "exec_always --no-startup-id ~/.config/config_time.sh ${NTP}" >> ~/.config/i3/config
-
 puts "Installing NeoVim Plugins."
 nvim -c ":PackerInstall" -c ":qall"
 
 clear
 puts "Installing AUR Packages (ly, nvm, sc-im, polybar and betterlockscreen)."
-yay -S ly nvm sc-im polybar betterlockscreen --nodiffmenu
+yay -S ly nvm sc-im polybar downgrade betterlockscreen --nodiffmenu
 sudo systemctl enable ly
 source /usr/share/nvm/init-nvm.sh
 
