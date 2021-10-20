@@ -10,7 +10,7 @@ fi
 pacman -Sy --noconfirm
 
 puts "Installing tools for the Window Manager."
-pacman -S alacritty i3-gaps feh network-manager-applet rofi dunst --noconfirm
+pacman -S alacritty i3-gaps feh network-manager-applet rofi dunst tmux --noconfirm
 
 puts "Installing File Managers."
 pacman -S ranger nautilus ntfs-3g --noconfirm
