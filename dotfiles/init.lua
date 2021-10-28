@@ -17,14 +17,15 @@ require('packer').startup(function()
 	}
 end)
 
+g.t_Co = 256
 g.mapleader = ' '
 
 o.tabstop = 4
 o.shiftwidth = 4
-o.encoding = 'UTF-8'
-o.clipboard = 'unnamedplus'
-
 o.mouse = 'a'
+o.encoding = 'UTF-8'
+o.background = 'dark'
+o.clipboard = 'unnamedplus'
 o.title = true
 o.wrap = false
 o.number = true
@@ -36,6 +37,7 @@ o.swapfile = false
 o.expandtab = true
 o.autoindent = true
 o.smartindent = true
+o.termguicolors = true
 
 remap('', '<leader>q', ':bd<CR>', { noremap = true })
 remap('', '<leader><Up>', ':tabnew<CR>', { noremap = true })
@@ -50,24 +52,20 @@ remap('', '<leader>s', ':Telescope current_buffer_fuzzy_find<CR>', { noremap = t
 local actions = require('telescope.actions')
 require('telescope').setup({
 	defaults = {
+		prompt_prefix = '~> ',
+		selection_caret = '~> ',
 		mappings = {
 			i = {
 				['<esc>'] = actions.close
 			}
 		}
-	}	
+	},	
+	pickers = {
+		file_browser = {
+			disable_devicons = true,
+		},
+	},
 })
-
-g.modes = {
-	n = 'Normal',
-	i = 'Insert',
-	v = 'Visual',
-	V = 'V-Line',
-	R = 'Replace',
-	c = 'Command',
-	Rv = 'V-Replace',
-	['<C-V>'] = 'V-Block',
-} 
 
 g.bufferline = {
 	icons = false,
@@ -75,7 +73,9 @@ g.bufferline = {
 	closable = true,
 	clickable = true,
 	animation = false,
-	icon_close_tab = 'x',
+	icon_close_tab = '  ',
+	icon_close_tab_modified = '  ',
+	icon_pinned = '  ',
 	no_name_title = 'New File',
 }
 
