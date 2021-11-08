@@ -36,7 +36,6 @@ passwd ${MYUSERNAME}
 
 puts "Adding User to /etc/sudoers file."
 echo "${MYUSERNAME} ALL=(ALL) ALL" >> /etc/sudoers
-echo "${MYUSERNAME} ALL=(ALL) NOPASSWD: /sbin/ntpdate" >> /etc/sudoers
 
 puts "Installing Microcode Package."
 pacman -S ${PROCESSOR}-ucode --noconfirm

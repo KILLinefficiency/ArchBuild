@@ -66,5 +66,6 @@ systemctl enable containerd
 puts "Enabling Pacman and YAY colors."
 echo "[options]" >> /etc/pacman.conf
 echo "Color" >> /etc/pacman.conf
+echo "ParallelDownloads = 3" >> /etc/pacman.conf
 
 puts "Done! Proceed with the ArchBuild_4.sh script."

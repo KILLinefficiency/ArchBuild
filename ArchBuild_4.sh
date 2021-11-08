@@ -35,7 +35,6 @@ cp dotfiles/sqliterc ~/.sqliterc
 cp dotfiles/Xresources ~/.Xresources
 cp dotfiles/init.lua ~/.config/nvim/init.lua
 cp dotfiles/mimeapps.list ~/.config/mimeapps.list
-cp dotfiles/config_time.sh ~/.config/config_time.sh
 cp dotfiles/screenkey.json ~/.config/screenkey.json
 cp dotfiles/settings.ini ~/.config/gtk-3.0/settings.ini
 cp dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
@@ -43,6 +42,7 @@ cp dotfiles/betterlockscreenrc ~/.config/betterlockscreenrc
 cp dotfiles/toggle_screenkey.sh ~/.config/toggle_screenkey.sh
 
 puts "Installing NeoVim Plugins."
+nvim --headless -u dotfiles/nvim_packages.lua -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 nvim -c ":PackerInstall" -c ":qall"
 
 clear
