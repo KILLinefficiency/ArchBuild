@@ -22,7 +22,6 @@ g.mapleader = ' '
 
 o.tabstop = 4
 o.shiftwidth = 4
-o.mouse = 'a'
 o.encoding = 'UTF-8'
 o.background = 'dark'
 o.clipboard = 'unnamedplus'
@@ -38,6 +37,13 @@ o.expandtab = true
 o.autoindent = true
 o.smartindent = true
 o.termguicolors = true
+
+remap('', 'W', 'k', { noremap = true })
+remap('', 'S', 'j', { noremap = true })
+remap('', 'A', 'h', { noremap = true })
+remap('', 'D', 'l', { noremap = true })
+
+remap('', '<leader>l', ':noh<CR>', { noremap = true })
 
 remap('', '<leader>q', ':bd<CR>', { noremap = true })
 remap('', '<leader><Up>', ':tabnew<CR>', { noremap = true })
